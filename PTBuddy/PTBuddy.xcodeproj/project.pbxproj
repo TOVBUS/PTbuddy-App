@@ -16,6 +16,8 @@
 		C479F0BA2C0DB3EA005A28DB /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479F0B92C0DB3EA005A28DB /* AddMealView.swift */; };
 		C479F0BC2C0DB40E005A28DB /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479F0BB2C0DB40E005A28DB /* MealDetailView.swift */; };
 		C479F0BE2C0DB431005A28DB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479F0BD2C0DB431005A28DB /* ImagePicker.swift */; };
+		C479F0C02C0DB8CA005A28DB /* MealContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479F0BF2C0DB8CA005A28DB /* MealContentView.swift */; };
+		C479F0C22C0DB92A005A28DB /* GetDietButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479F0C12C0DB92A005A28DB /* GetDietButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		C479F0B92C0DB3EA005A28DB /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		C479F0BB2C0DB40E005A28DB /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		C479F0BD2C0DB431005A28DB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C479F0BF2C0DB8CA005A28DB /* MealContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealContentView.swift; sourceTree = "<group>"; };
+		C479F0C12C0DB92A005A28DB /* GetDietButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDietButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				C479F0B92C0DB3EA005A28DB /* AddMealView.swift */,
 				C479F0BB2C0DB40E005A28DB /* MealDetailView.swift */,
 				C479F0BD2C0DB431005A28DB /* ImagePicker.swift */,
+				C479F0BF2C0DB8CA005A28DB /* MealContentView.swift */,
+				C479F0C12C0DB92A005A28DB /* GetDietButton.swift */,
 			);
 			path = jihye;
 			sourceTree = "<group>";
@@ -160,11 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C479F0C22C0DB92A005A28DB /* GetDietButton.swift in Sources */,
 				C479F0BC2C0DB40E005A28DB /* MealDetailView.swift in Sources */,
 				C479F0B82C0DB1CA005A28DB /* MealRecordsView.swift in Sources */,
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				C479F0BE2C0DB431005A28DB /* ImagePicker.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
+				C479F0C02C0DB8CA005A28DB /* MealContentView.swift in Sources */,
 				C479F0B62C0DB10D005A28DB /* RecommendedDietView.swift in Sources */,
 				C479F0BA2C0DB3EA005A28DB /* AddMealView.swift in Sources */,
 			);
