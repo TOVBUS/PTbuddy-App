@@ -16,20 +16,16 @@ struct ContentView: View {
                 .padding()
 
             Text("Hello, Pretendard Black!")
-                .font(.custom("Pretendard-Black", size: 22))
+                .pretendardFont(.Black, size: 22)
                 .tracking(-0.6)
                 .padding()
             
             Text("Hello, Pretendard Light!")
-                .font(.custom("Pretendard-Light", size: 24))
+                .pretendardFont(.Light, size: 24)
                 .kerning(-0.4)
                 .padding()
         }
         .padding()
-        
-        .onAppear {
-            
-        }
     }
 }
 

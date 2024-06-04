@@ -20,6 +20,7 @@
 		8F03F5922C0F4EFF00C8D1C1 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5892C0F4EFC00C8D1C1 /* Pretendard-ExtraBold.otf */; };
 		8F03F5932C0F4EFF00C8D1C1 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F58A2C0F4EFD00C8D1C1 /* Pretendard-Black.otf */; };
 		8F03F5942C0F4EFF00C8D1C1 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F58B2C0F4EFE00C8D1C1 /* Pretendard-SemiBold.otf */; };
+		8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F03F5972C0F556900C8D1C1 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8F03F58A2C0F4EFD00C8D1C1 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		8F03F58B2C0F4EFE00C8D1C1 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		8F03F5952C0F4F5200C8D1C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8F03F5972C0F556900C8D1C1 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				8F03F5952C0F4F5200C8D1C1 /* Info.plist */,
 				3E16017B2C0DAD7F009466A3 /* PTBuddyApp.swift */,
 				8F03F5812C0F4E2900C8D1C1 /* Resources */,
+				8F03F5962C0F54E900C8D1C1 /* Extensions */,
 				8F03F5802C0F4E0700C8D1C1 /* Services */,
 				8F03F57F2C0F4DFD00C8D1C1 /* ViewModels */,
 				8F03F57E2C0F4DE500C8D1C1 /* Models */,
@@ -142,6 +145,14 @@
 				8F03F5852C0F4EF800C8D1C1 /* Pretendard-Thin.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8F03F5962C0F54E900C8D1C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F03F5972C0F556900C8D1C1 /* View+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
+				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
