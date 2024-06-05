@@ -24,6 +24,11 @@
 		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
 		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
 		C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */; };
+		E1F6CDAA2C103F7400CEE6CE /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDA92C103F7400CEE6CE /* BasicInfo.swift */; };
+		E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDAB2C103F8E00CEE6CE /* EatingHabit.swift */; };
+		E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDAD2C10427A00CEE6CE /* ActivityHabit.swift */; };
+		E1F6CDB02C1043BF00CEE6CE /* ActivityGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDAF2C1043BF00CEE6CE /* ActivityGoal.swift */; };
+		E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB12C104A3600CEE6CE /* OnboardingMemberInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
 		C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMainView.swift; sourceTree = "<group>"; };
+		E1F6CDA92C103F7400CEE6CE /* BasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfo.swift; sourceTree = "<group>"; };
+		E1F6CDAB2C103F8E00CEE6CE /* EatingHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatingHabit.swift; sourceTree = "<group>"; };
+		E1F6CDAD2C10427A00CEE6CE /* ActivityHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHabit.swift; sourceTree = "<group>"; };
+		E1F6CDAF2C1043BF00CEE6CE /* ActivityGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityGoal.swift; sourceTree = "<group>"; };
+		E1F6CDB12C104A3600CEE6CE /* OnboardingMemberInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMemberInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */,
+				E1F6CDA92C103F7400CEE6CE /* BasicInfo.swift */,
+				E1F6CDAB2C103F8E00CEE6CE /* EatingHabit.swift */,
+				E1F6CDAD2C10427A00CEE6CE /* ActivityHabit.swift */,
+				E1F6CDAF2C1043BF00CEE6CE /* ActivityGoal.swift */,
+				E1F6CDB12C104A3600CEE6CE /* OnboardingMemberInfo.swift */,
 			);
 			path = OnboardingTab;
 			sourceTree = "<group>";
@@ -244,10 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
+				E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */,
 				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
+				E1F6CDB02C1043BF00CEE6CE /* ActivityGoal.swift in Sources */,
 				C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */,
 				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
+				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
+				E1F6CDAA2C103F7400CEE6CE /* BasicInfo.swift in Sources */,
+				E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
