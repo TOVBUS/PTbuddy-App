@@ -21,6 +21,9 @@
 		8F03F5932C0F4EFF00C8D1C1 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F58A2C0F4EFD00C8D1C1 /* Pretendard-Black.otf */; };
 		8F03F5942C0F4EFF00C8D1C1 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F58B2C0F4EFE00C8D1C1 /* Pretendard-SemiBold.otf */; };
 		8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F03F5972C0F556900C8D1C1 /* View+Extension.swift */; };
+		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
+		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
+		C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		8F03F58B2C0F4EFE00C8D1C1 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		8F03F5952C0F4F5200C8D1C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8F03F5972C0F556900C8D1C1 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
+		C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
+		C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +80,11 @@
 			children = (
 				8F03F5952C0F4F5200C8D1C1 /* Info.plist */,
 				3E16017B2C0DAD7F009466A3 /* PTBuddyApp.swift */,
+				C42EB1E42C0FFFB40031C3FF /* ActivityTab */,
+				C42EB1E32C0FFFA90031C3FF /* OnboardingTab */,
+				C42EB1E22C0FFF7A0031C3FF /* MealTab */,
 				8F03F5812C0F4E2900C8D1C1 /* Resources */,
 				8F03F5962C0F54E900C8D1C1 /* Extensions */,
-				8F03F5802C0F4E0700C8D1C1 /* Services */,
-				8F03F57F2C0F4DFD00C8D1C1 /* ViewModels */,
-				8F03F57E2C0F4DE500C8D1C1 /* Models */,
 				8F03F57D2C0F4DCC00C8D1C1 /* Views */,
 				3E1601812C0DAD81009466A3 /* Preview Content */,
 			);
@@ -99,27 +105,6 @@
 				3E16017D2C0DAD7F009466A3 /* ContentView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8F03F57E2C0F4DE500C8D1C1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		8F03F57F2C0F4DFD00C8D1C1 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		8F03F5802C0F4E0700C8D1C1 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		8F03F5812C0F4E2900C8D1C1 /* Resources */ = {
@@ -153,6 +138,30 @@
 				8F03F5972C0F556900C8D1C1 /* View+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C42EB1E22C0FFF7A0031C3FF /* MealTab */ = {
+			isa = PBXGroup;
+			children = (
+				C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */,
+			);
+			path = MealTab;
+			sourceTree = "<group>";
+		};
+		C42EB1E32C0FFFA90031C3FF /* OnboardingTab */ = {
+			isa = PBXGroup;
+			children = (
+				C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */,
+			);
+			path = OnboardingTab;
+			sourceTree = "<group>";
+		};
+		C42EB1E42C0FFFB40031C3FF /* ActivityTab */ = {
+			isa = PBXGroup;
+			children = (
+				C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */,
+			);
+			path = ActivityTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +245,9 @@
 			files = (
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
+				C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */,
+				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
+				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
