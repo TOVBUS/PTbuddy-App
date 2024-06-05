@@ -17,7 +17,7 @@ struct OnboardingMainTitleView: View {
                 .fontWeight(.bold)
                 .frame(alignment: .leading)
             Spacer()
-        }.padding(.horizontal, 20)
+        }.padding(.horizontal, 30)
     }
 }
 

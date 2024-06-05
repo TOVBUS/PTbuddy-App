@@ -19,10 +19,10 @@ struct MainButtonView: View {
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
-                .cornerRadius(15)
+                .cornerRadius(20)
         }
-        .contentShape(RoundedRectangle(cornerRadius: 15))
-        .padding()
+        .contentShape(RoundedRectangle(cornerRadius: 20))
+        .padding(.horizontal, 30)
         .buttonStyle(PlainButtonStyle())
     }
 }

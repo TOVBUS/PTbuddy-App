@@ -20,13 +20,13 @@ struct OnboardingButtonView: View {
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background()
-                .cornerRadius(15)
+                .cornerRadius(20)
                 .overlay(
                     RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 2.0)
                 )
         }
-        .contentShape(RoundedRectangle(cornerRadius: 15))
-        .padding()
+        .contentShape(RoundedRectangle(cornerRadius: 20))
+        .padding(.horizontal, 30)
         .buttonStyle(PlainButtonStyle())
     }
 }
