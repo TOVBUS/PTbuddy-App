@@ -29,6 +29,10 @@
 		E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDAD2C10427A00CEE6CE /* ActivityHabit.swift */; };
 		E1F6CDB02C1043BF00CEE6CE /* ActivityGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDAF2C1043BF00CEE6CE /* ActivityGoal.swift */; };
 		E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB12C104A3600CEE6CE /* OnboardingMemberInfo.swift */; };
+		E1F6CDB42C10535E00CEE6CE /* OnboardingMainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB32C10535E00CEE6CE /* OnboardingMainTitleView.swift */; };
+		E1F6CDB62C10542800CEE6CE /* OnboardingSubTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB52C10542800CEE6CE /* OnboardingSubTitleView.swift */; };
+		E1F6CDB82C10546D00CEE6CE /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB72C10546D00CEE6CE /* OnboardingButtonView.swift */; };
+		E1F6CDBA2C10548600CEE6CE /* OnboardingMainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		E1F6CDAD2C10427A00CEE6CE /* ActivityHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHabit.swift; sourceTree = "<group>"; };
 		E1F6CDAF2C1043BF00CEE6CE /* ActivityGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityGoal.swift; sourceTree = "<group>"; };
 		E1F6CDB12C104A3600CEE6CE /* OnboardingMemberInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMemberInfo.swift; sourceTree = "<group>"; };
+		E1F6CDB32C10535E00CEE6CE /* OnboardingMainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainTitleView.swift; sourceTree = "<group>"; };
+		E1F6CDB52C10542800CEE6CE /* OnboardingSubTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSubTitleView.swift; sourceTree = "<group>"; };
+		E1F6CDB72C10546D00CEE6CE /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
+		E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,10 @@
 				E1F6CDAD2C10427A00CEE6CE /* ActivityHabit.swift */,
 				E1F6CDAF2C1043BF00CEE6CE /* ActivityGoal.swift */,
 				E1F6CDB12C104A3600CEE6CE /* OnboardingMemberInfo.swift */,
+				E1F6CDB32C10535E00CEE6CE /* OnboardingMainTitleView.swift */,
+				E1F6CDB52C10542800CEE6CE /* OnboardingSubTitleView.swift */,
+				E1F6CDB72C10546D00CEE6CE /* OnboardingButtonView.swift */,
+				E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */,
 			);
 			path = OnboardingTab;
 			sourceTree = "<group>";
@@ -258,15 +270,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F6CDB62C10542800CEE6CE /* OnboardingSubTitleView.swift in Sources */,
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */,
 				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
 				E1F6CDB02C1043BF00CEE6CE /* ActivityGoal.swift in Sources */,
 				C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */,
+				E1F6CDB42C10535E00CEE6CE /* OnboardingMainTitleView.swift in Sources */,
 				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
 				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
 				E1F6CDAA2C103F7400CEE6CE /* BasicInfo.swift in Sources */,
+				E1F6CDBA2C10548600CEE6CE /* OnboardingMainButtonView.swift in Sources */,
+				E1F6CDB82C10546D00CEE6CE /* OnboardingButtonView.swift in Sources */,
 				E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
 			);
