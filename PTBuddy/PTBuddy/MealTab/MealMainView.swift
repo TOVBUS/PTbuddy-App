@@ -9,7 +9,18 @@ import SwiftUI
 
 struct MealMainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            VStack(alignment: .leading){
+                RecommendedDietView()
+                
+                MealRecordsView()
+                
+                Spacer()
+                
+                GetDietButton()
+            }
+
+        }
     }
 }
 
