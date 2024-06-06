@@ -33,6 +33,7 @@
 		E1F6CDB62C10542800CEE6CE /* OnboardingSubTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB52C10542800CEE6CE /* OnboardingSubTitleView.swift */; };
 		E1F6CDB82C10546D00CEE6CE /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB72C10546D00CEE6CE /* OnboardingButtonView.swift */; };
 		E1F6CDBA2C10548600CEE6CE /* OnboardingMainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */; };
+		E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		E1F6CDB52C10542800CEE6CE /* OnboardingSubTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSubTitleView.swift; sourceTree = "<group>"; };
 		E1F6CDB72C10546D00CEE6CE /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
 		E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainButtonView.swift; sourceTree = "<group>"; };
+		E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				E1F6CDB52C10542800CEE6CE /* OnboardingSubTitleView.swift */,
 				E1F6CDB72C10546D00CEE6CE /* OnboardingButtonView.swift */,
 				E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */,
+				E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */,
 			);
 			path = OnboardingTab;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				E1F6CDBA2C10548600CEE6CE /* OnboardingMainButtonView.swift in Sources */,
 				E1F6CDB82C10546D00CEE6CE /* OnboardingButtonView.swift in Sources */,
 				E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */,
+				E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 import Foundation
 
 class ActivityHabit: ObservableObject {
-    // 평소에 얼마나 움직이나요? : 매우 적은 수준, 가벼운 수준, 일반적인 수준, 일반적인 수준, 매우 많은 수준
+    // 평소에 얼마나 움직이나요? : 매우 적은 수준, 가벼운 수준, 일반적인 수준, 매우 많은 수준
     @Published var usualActivity: String
     // 하루에 얼마나 걷나요?
     @Published var dailyStep: String
