@@ -27,6 +27,7 @@
 		C40CEB512C121CBC00C86273 /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB502C121CBC00C86273 /* AddMealView.swift */; };
 		C40CEB532C121E7C00C86273 /* MealRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB522C121E7C00C86273 /* MealRecordsView.swift */; };
 		C40CEB552C121FF300C86273 /* GetDietButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB542C121FF300C86273 /* GetDietButton.swift */; };
+		C40CEB572C1220B100C86273 /* RecommendedDietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB562C1220B100C86273 /* RecommendedDietView.swift */; };
 		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
 		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
 		C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */; };
@@ -55,6 +56,7 @@
 		C40CEB502C121CBC00C86273 /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		C40CEB522C121E7C00C86273 /* MealRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordsView.swift; sourceTree = "<group>"; };
 		C40CEB542C121FF300C86273 /* GetDietButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDietButton.swift; sourceTree = "<group>"; };
+		C40CEB562C1220B100C86273 /* RecommendedDietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedDietView.swift; sourceTree = "<group>"; };
 		C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
 		C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMainView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				C40CEB502C121CBC00C86273 /* AddMealView.swift */,
 				C40CEB522C121E7C00C86273 /* MealRecordsView.swift */,
 				C40CEB542C121FF300C86273 /* GetDietButton.swift */,
+				C40CEB562C1220B100C86273 /* RecommendedDietView.swift */,
 			);
 			path = MealTab;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40CEB552C121FF300C86273 /* GetDietButton.swift in Sources */,
+				C40CEB572C1220B100C86273 /* RecommendedDietView.swift in Sources */,
 				C40CEB4F2C1217EF00C86273 /* MealDetailView.swift in Sources */,
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
