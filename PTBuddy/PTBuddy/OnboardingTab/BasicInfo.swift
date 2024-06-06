@@ -11,10 +11,10 @@ class BasicInfo: ObservableObject {
     @Published var nick: String
     @Published var gender: String
     @Published var birth: String
-    @Published var height: Float
-    @Published var weight: Float
+    @Published var height: String
+    @Published var weight: String
 
-    init(nick: String, gender: String, birth: String, height: Float, weight: Float) {
+    init(nick: String, gender: String, birth: String, height: String, weight: String) {
         self.nick = nick
         self.gender = gender
         self.birth = birth

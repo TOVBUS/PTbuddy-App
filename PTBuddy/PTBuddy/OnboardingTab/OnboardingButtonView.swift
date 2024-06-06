@@ -9,21 +9,30 @@ import SwiftUI
 
 struct OnboardingButtonView: View {
     var buttonText: String
-
+    @State var isSelected: Bool
+    var action: () -> Void
+    
     var body: some View {
         Button(action: {
-
+            isSelected.toggle()
+            action()
         }) {
-            Text(buttonText)
-                .font(.title)
-                .foregroundColor(.black)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background()
-                .cornerRadius(20)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 2.0)
-                )
+            HStack {
+                Text(buttonText)
+                    .font(.title)
+                    .foregroundColor(.black)
+                if isSelected {
+                    Image(systemName: "checkmark")
+                        .foregroundColor(.green)
+                }
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+            .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 2.0)
+            )
         }
         .contentShape(RoundedRectangle(cornerRadius: 20))
         .padding(.horizontal, 30)
@@ -31,7 +40,7 @@ struct OnboardingButtonView: View {
     }
 }
 
-#Preview {
-    OnboardingButtonView(buttonText: "헬스")
-}
+//#Preview {
+//    OnboardingButtonView(buttonText: "헬스")
+//}
 

@@ -35,6 +35,7 @@
 		E1F6CDBA2C10548600CEE6CE /* OnboardingMainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */; };
 		E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */; };
 		E1F6CDC02C11983300CEE6CE /* OnboardingQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDBF2C11983300CEE6CE /* OnboardingQuestionView.swift */; };
+		E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainButtonView.swift; sourceTree = "<group>"; };
 		E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestion.swift; sourceTree = "<group>"; };
 		E1F6CDBF2C11983300CEE6CE /* OnboardingQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionView.swift; sourceTree = "<group>"; };
+		E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				E1F6CDB92C10548600CEE6CE /* OnboardingMainButtonView.swift */,
 				E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */,
 				E1F6CDBF2C11983300CEE6CE /* OnboardingQuestionView.swift */,
+				E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */,
 			);
 			path = OnboardingTab;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
 				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
+				E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */,
 				E1F6CDAA2C103F7400CEE6CE /* BasicInfo.swift in Sources */,
 				E1F6CDBA2C10548600CEE6CE /* OnboardingMainButtonView.swift in Sources */,
 				E1F6CDB82C10546D00CEE6CE /* OnboardingButtonView.swift in Sources */,

@@ -33,11 +33,11 @@ let onboardingQuestions = [
     OnboardingQuestion(id: 16, mainTitle: "규칙적으로 운동을 하고 있나요?", answers: ["처음이에요", "3개월 이내", "3-6개월", "6-12개월", "1년 이상"]),
     OnboardingQuestion(id: 17, mainTitle: "규칙적으로 하는 운동은 무엇인가요?", answers: ["헬스", "홈트", "크로스핏/HIIT/복싱", "필라테스/요가", "빠르게 걷기", "달리기", "실내 사이클/야외 자전거", "수영"]),
     OnboardingQuestion(id: 18, mainTitle: "일주일에 보통 며칠 운동하나요?", answers: ["1일", "2일", "3일", "4일", "5일", "6일", "7일"]),
-    OnboardingQuestion(id: 18, mainTitle: "하루 보통 몇 시간 운동을 하나요?"),
+    OnboardingQuestion(id: 18, mainTitle: "하루 보통 몇 시간 운동을 하나요?", answers: ["1시간 미만", "1시간 이상 2시간 미만", "2시간 이상 3시간 미만", "3시간 이상 4시간 미만", "4시간 이상 5시간 미만", "5시간 이상"]),
     OnboardingQuestion(id: 19, mainTitle: "코칭 시작 후, 운동량의 변화를 줄 예정인가요?", answers: ["유지할 예정", "늘릴 예정", "줄일 예정"]),
     OnboardingQuestion(id: 20, mainTitle: "목표 몸무게는 어떻게 되시나요?"),
     OnboardingQuestion(id: 21, mainTitle: "주요 목표는 무엇인가요?", answers: ["근육 증가", "체지방 감소", "현재 상태 유지"]),
     OnboardingQuestion(id: 22, mainTitle: "주로 어디서 운동하나요?", answers: ["헬스장", "집"]),
     OnboardingQuestion(id: 23, mainTitle: "어떤 운동을 선호하나요?", answers: ["맨몸 운동", "기구 운동"]),
-    OnboardingQuestion(id: 24, mainTitle: "일주일에 몇 번 운동하실 예정인가요?")
+    OnboardingQuestion(id: 24, mainTitle: "일주일에 몇 번 운동하실 예정인가요?", answers: ["1일", "2일", "3일", "4일", "5일", "6일", "7일"])
 ]
