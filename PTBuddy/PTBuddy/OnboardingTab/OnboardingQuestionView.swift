@@ -23,7 +23,8 @@ struct OnboardingQuestionView: View {
 
                 if let answers = question.answers {
                     ForEach(answers, id: \.self) { answer in
-                        OnboardingButtonView(buttonText: answer, isSelected: selectedAnswer == answer ? true : false) {
+                        OnboardingButtonView(buttonText: answer, isSelected: selectedAnswer == answer) {
+                            selectedAnswer = answer
                             switch question.id {
                             case 2:
                                 memberInfo.basicInfo.gender = answer

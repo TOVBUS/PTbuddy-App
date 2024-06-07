@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingButtonView: View {
     var buttonText: String
-    @State var isSelected: Bool
+    @State var isSelected: Bool = false
     var action: () -> Void
     
     var body: some View {
