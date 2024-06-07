@@ -9,7 +9,8 @@ import SwiftUI
 
 struct OnboardingQuestionView: View {
     @EnvironmentObject var memberInfo: OnboardingMemberInfo
-    @State private var selectedAnswer: String?
+    @State var selectedAnswer: String?
+
 
     var question: OnboardingQuestion
 
@@ -20,10 +21,10 @@ struct OnboardingQuestionView: View {
                 if let subTitle = question.subTitle {
                     OnboardingSubTitleView(subTitleText: subTitle)
                 }
-
+                
                 if let answers = question.answers {
                     ForEach(answers, id: \.self) { answer in
-                        OnboardingButtonView(buttonText: answer, isSelected: selectedAnswer == answer) {
+                        OnboardingButtonView(buttonText: answer, isSelected: .constant(selectedAnswer == answer)) {
                             selectedAnswer = answer
                             switch question.id {
                             case 2:

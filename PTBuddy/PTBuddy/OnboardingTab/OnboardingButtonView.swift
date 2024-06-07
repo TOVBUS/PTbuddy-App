@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingButtonView: View {
     var buttonText: String
-    @State var isSelected: Bool = false
+    @Binding var isSelected: Bool
     var action: () -> Void
     
     var body: some View {
@@ -21,6 +21,7 @@ struct OnboardingButtonView: View {
                 Text(buttonText)
                     .font(.title)
                     .foregroundColor(.black)
+                Spacer()
                 if isSelected {
                     Image(systemName: "checkmark")
                         .foregroundColor(.green)
