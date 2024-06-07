@@ -16,38 +16,59 @@ struct MealDetailView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                
-                Text("기록하고 싶은 내용을 자유롭게 써주세요!")
-                                    .pretendardFont(.Regular, size: 18)
-                
-                ScrollView(.horizontal) {
-                    HStack {
-                        ForEach(mealRecord.images, id: \.self) { image in
-                            Image(uiImage: image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 100, height: 100)
-                                .clipped()
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("기록하고 싶은 내용을 자유롭게 써주세요!")
+                        .pretendardFont(.Regular, size: 18)
+                        //.padding(.bottom, 10)
+                    
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach(mealRecord.images, id: \.self) { image in
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 100, height: 100)
+                                    .clipped()
+                            }
                         }
+                        .padding(.bottom, 10)
                     }
-                }
-                
-                TextEditor(text: $mealRecord.notes)
-                    .pretendardFont(.Regular, size: 18)
-                    .frame(height: 300)
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.orange.opacity(0.5))
+                        TextEditor(text: $mealRecord.notes)
+                            .scrollContentBackground(.hidden)
+                            .background(Color.clear)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .pretendardFont(.Regular, size: 18)
+                            .padding()
+                    }
+                    .frame(height: 500)
                     .padding()
-                    .background(Color.orange.opacity(0.5))
-                    .cornerRadius(20)
-                    .onChange(of: mealRecord.notes) { newValue in
-                        onSave(MealRecord(notes: newValue, type: mealType))
+                    //.padding(.horizontal, 30)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        onSave(mealRecord)
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("메모 추가하기")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.orange)
+                            .cornerRadius(10)
                     }
-                
-                Spacer()
+                    .padding()
+                    //.padding(.horizontal, 30)
+                    .padding(.bottom, 20)
+                }
+                .padding()
             }
-            .padding()
-            .navigationTitle("식단 메모")
-                .pretendardFont(.Bold, size: 20)
+            .navigationTitle("식단메모")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -67,4 +88,5 @@ struct MealDetailView_Previews: PreviewProvider {
         MealDetailView(mealRecord: MealRecord(type: "아침"), mealType: "아침", onSave: { _ in })
     }
 }
+
 

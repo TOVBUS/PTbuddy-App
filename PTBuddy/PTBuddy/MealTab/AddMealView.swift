@@ -17,25 +17,42 @@ struct AddMealView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                
                 Text("기록하고 싶은 내용을 자유롭게 써주세요!")
                     .pretendardFont(.Regular, size: 18)
-                    .padding(.bottom, 10)
+                    //.padding(.bottom, 10)
                 
                 ZStack {
-                    Color.orange.opacity(0.5)
-                        .cornerRadius(10)
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.orange.opacity(0.5))
                     TextEditor(text: $mealRecord.notes)
-                        .padding()
+                        .scrollContentBackground(.hidden)
                         .background(Color.clear)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .pretendardFont(.Regular, size: 18)
+                        .padding()
                 }
-                .frame(maxHeight: 300)
+                .frame(height: 500)
+                .padding()
+                //.padding(.horizontal, 30)
                 
                 Spacer()
+                
+                Button(action: {
+                    onSave(mealRecord)
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("메모 추가하기")
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.orange)
+                        .cornerRadius(10)
+                }
+                .padding()
+                //.padding(.horizontal, 30)
             }
             .padding()
             .navigationTitle("식단메모")
-            .pretendardFont(.Bold, size: 20)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -46,9 +63,6 @@ struct AddMealView: View {
                     }
                 }
             }
-            .onChange(of: mealRecord.notes) { newValue in
-                onSave(MealRecord(notes: newValue, type: mealType))
-            }
         }
     }
 }
@@ -58,3 +72,4 @@ struct AddMealView_Previews: PreviewProvider {
         AddMealView(mealRecord: MealRecord(type: "아침"), mealType: "아침") { _ in }
     }
 }
+
