@@ -36,6 +36,7 @@
 		E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */; };
 		E1F6CDC02C11983300CEE6CE /* OnboardingQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDBF2C11983300CEE6CE /* OnboardingQuestionView.swift */; };
 		E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */; };
+		E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC32C14B7FB00CEE6CE /* OnboardingDatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestion.swift; sourceTree = "<group>"; };
 		E1F6CDBF2C11983300CEE6CE /* OnboardingQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionView.swift; sourceTree = "<group>"; };
 		E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextFieldView.swift; sourceTree = "<group>"; };
+		E1F6CDC32C14B7FB00CEE6CE /* OnboardingDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDatePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				E1F6CDBD2C117BCD00CEE6CE /* OnboardingQuestion.swift */,
 				E1F6CDBF2C11983300CEE6CE /* OnboardingQuestionView.swift */,
 				E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */,
+				E1F6CDC32C14B7FB00CEE6CE /* OnboardingDatePickerView.swift */,
 			);
 			path = OnboardingTab;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				E1F6CDB42C10535E00CEE6CE /* OnboardingMainTitleView.swift in Sources */,
 				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
 				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
+				E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
 				E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */,
 				E1F6CDAA2C103F7400CEE6CE /* BasicInfo.swift in Sources */,
