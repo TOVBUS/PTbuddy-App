@@ -33,6 +33,7 @@ struct QuestionContentView: View {
     var question: OnboardingQuestion
     @Binding var selectedAnswer: [String]
     @EnvironmentObject var memberInfo: OnboardingMemberInfo
+    let defaultDate = Date()
 
     var body: some View {
         if let answers = question.answers {
@@ -47,7 +48,14 @@ struct QuestionContentView: View {
             case 1:
                 OnboardingTextFieldView(placeholder: "이름", text: $memberInfo.basicInfo.nick)
             case 3:
-                OnboardingDatePickerView(selectedDateString: $memberInfo.basicInfo.birth)
+                let birthDate = memberInfo.basicInfo.birth.toDate(withFormat: "yyyy-MM-dd") ?? defaultDate
+                OnboardingDatePickerView(selectedDate: Binding<Date>(
+                    get: {
+                        birthDate
+                    }, set: { newValue in
+                        memberInfo.basicInfo.birth = newValue.toString(withFormat: "yyyy-MM-dd")
+                    }
+                ))
             case 4:
                 OnboardingTextFieldView(placeholder: "160cm", text: $memberInfo.basicInfo.height)
             case 5:
@@ -87,6 +95,22 @@ struct QuestionContentView: View {
         if let action = updateActions[questionId] {
             action(answer)
         }
+    }
+}
+
+extension String {
+    func toDate(withFormat format: String = "yyyy-MM-dd") -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: self)
+    }
+}
+
+extension Date {
+    func toString(withFormat format: String = "yyyy-MM-dd") -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
     }
 }
 
