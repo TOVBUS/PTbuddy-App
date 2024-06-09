@@ -130,7 +130,7 @@ struct ActivityMainView: View {
                     // 버튼 액션
                 }) {
                     Text("운동 시작하기")
-                        .font(.headline)
+                        .pretendardFont(.SemiBold, size: 18)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, maxHeight: 50)
                         .background(Color.orange)
