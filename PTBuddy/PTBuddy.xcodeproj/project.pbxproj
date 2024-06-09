@@ -25,6 +25,7 @@
 		8F4D42592C15DA7800A16350 /* ActivityRoutineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D42582C15DA7800A16350 /* ActivityRoutineListView.swift */; };
 		8F4D425B2C15DD9700A16350 /* ActivityRoutineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D425A2C15DD9700A16350 /* ActivityRoutineRow.swift */; };
 		8F4D425D2C15E6E700A16350 /* ActivityTimeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D425C2C15E6E700A16350 /* ActivityTimeListView.swift */; };
+		8F4D425F2C15F3ED00A16350 /* ActivityConditionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D425E2C15F3ED00A16350 /* ActivityConditionListView.swift */; };
 		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
 		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
 		C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */; };
@@ -51,6 +52,7 @@
 		8F4D42582C15DA7800A16350 /* ActivityRoutineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRoutineListView.swift; sourceTree = "<group>"; };
 		8F4D425A2C15DD9700A16350 /* ActivityRoutineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRoutineRow.swift; sourceTree = "<group>"; };
 		8F4D425C2C15E6E700A16350 /* ActivityTimeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimeListView.swift; sourceTree = "<group>"; };
+		8F4D425E2C15F3ED00A16350 /* ActivityConditionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityConditionListView.swift; sourceTree = "<group>"; };
 		C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
 		C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMainView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */,
 				8F4D42582C15DA7800A16350 /* ActivityRoutineListView.swift */,
+				8F4D425E2C15F3ED00A16350 /* ActivityConditionListView.swift */,
 				8F4D425C2C15E6E700A16350 /* ActivityTimeListView.swift */,
 				8F4D425A2C15DD9700A16350 /* ActivityRoutineRow.swift */,
 				3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */,
@@ -257,6 +260,7 @@
 			files = (
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
+				8F4D425F2C15F3ED00A16350 /* ActivityConditionListView.swift in Sources */,
 				8F4D425D2C15E6E700A16350 /* ActivityTimeListView.swift in Sources */,
 				8F4D425B2C15DD9700A16350 /* ActivityRoutineRow.swift in Sources */,
 				8F4D42592C15DA7800A16350 /* ActivityRoutineListView.swift in Sources */,

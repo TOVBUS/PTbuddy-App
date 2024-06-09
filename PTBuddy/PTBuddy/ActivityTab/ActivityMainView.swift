@@ -10,6 +10,7 @@ import SwiftUI
 struct ActivityMainView: View {
     @StateObject private var activityVM = ActivityViewModel()
     @State private var showActivityTimeList = false
+    @State private var showActivityConditionList = false
     
     var body: some View {
         NavigationStack {
@@ -48,7 +49,7 @@ struct ActivityMainView: View {
                 Section {
                     VStack {
                         HStack {
-                            // 첫 번째 버튼
+                            
                             NavigationLink(destination: ActivityRoutineListView()) {
                                 HStack {
                                     Text("부위")
@@ -64,7 +65,6 @@ struct ActivityMainView: View {
                                 .background(Capsule().fill(Color.gray))
                             }
                             
-                            // 두 번째 버튼
                             Button(action: {
                                 showActivityTimeList.toggle()
                             }) {
@@ -87,9 +87,8 @@ struct ActivityMainView: View {
                                     .presentationDragIndicator(.visible)
                             }
                             
-                            // 세 번째 버튼
                             Button(action: {
-                                // 버튼 액션
+                                showActivityConditionList.toggle()
                             }) {
                                 HStack {
                                     Text("컨디션")
@@ -103,6 +102,11 @@ struct ActivityMainView: View {
                                 .padding()
                                 .frame(width: 120, height: 40)
                                 .background(Capsule().fill(Color.gray))
+                            }
+                            .sheet(isPresented: $showActivityConditionList) {
+                                ActivityConditionListView()
+                                    .presentationDetents([.fraction(0.8)])
+                                    .presentationDragIndicator(.visible)
                             }
                         }
                     }
