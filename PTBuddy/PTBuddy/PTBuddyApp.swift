@@ -11,7 +11,8 @@ import SwiftUI
 struct PTBuddyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            ActivityMainView()
         }
     }
 }

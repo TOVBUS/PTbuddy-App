@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ActivityMainView: View {
     @StateObject private var activityVM = ActivityViewModel()
+    @State private var showActivityTimeList = false
     
     var body: some View {
         NavigationStack {
@@ -65,7 +66,7 @@ struct ActivityMainView: View {
                             
                             // 두 번째 버튼
                             Button(action: {
-                                // 버튼 액션
+                                showActivityTimeList.toggle()
                             }) {
                                 HStack {
                                     Text("시간")
@@ -79,6 +80,11 @@ struct ActivityMainView: View {
                                 .padding()
                                 .frame(width: 100, height: 40)
                                 .background(Capsule().fill(Color.gray))
+                            }
+                            .sheet(isPresented: $showActivityTimeList) {
+                                ActivityTimeListView()
+                                    .presentationDetents([.fraction(0.8)])
+                                    .presentationDragIndicator(.visible)
                             }
                             
                             // 세 번째 버튼
