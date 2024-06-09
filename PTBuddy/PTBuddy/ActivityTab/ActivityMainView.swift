@@ -48,9 +48,7 @@ struct ActivityMainView: View {
                     VStack {
                         HStack {
                             // 첫 번째 버튼
-                            Button(action: {
-                                // 버튼 액션
-                            }) {
+                            NavigationLink(destination: ActivityRoutineListView()) {
                                 HStack {
                                     Text("부위")
                                         .pretendardFont(.Medium, size: 14)
