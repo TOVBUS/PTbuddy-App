@@ -46,7 +46,7 @@ struct QuestionContentView: View {
         } else {
             switch question.id {
             case 1:
-                OnboardingTextFieldView(placeholder: "이름", text: $memberInfo.basicInfo.nick)
+                OnboardingTextFieldView(placeholder: "이름", text: $memberInfo.basicInfo.nick, keyboardType: .default)
             case 3:
                 let birthDate = memberInfo.basicInfo.birth.toDate(withFormat: "yyyy-MM-dd") ?? defaultDate
                 OnboardingDatePickerView(selectedDate: Binding<Date>(
@@ -57,11 +57,11 @@ struct QuestionContentView: View {
                     }
                 ))
             case 4:
-                OnboardingTextFieldView(placeholder: "160cm", text: $memberInfo.basicInfo.height)
+                OnboardingTextFieldView(placeholder: "160cm", text: $memberInfo.basicInfo.height, keyboardType: .numberPad)
             case 5:
-                OnboardingTextFieldView(placeholder: "55kg", text: $memberInfo.basicInfo.weight)
+                OnboardingTextFieldView(placeholder: "55kg", text: $memberInfo.basicInfo.weight, keyboardType: .numberPad)
             case 21:
-                OnboardingTextFieldView(placeholder: "55kg", text: $memberInfo.activityGoal.goalWeight)
+                OnboardingTextFieldView(placeholder: "55kg", text: $memberInfo.activityGoal.goalWeight, keyboardType: .numberPad)
             default:
                 Text("기본")
             }
