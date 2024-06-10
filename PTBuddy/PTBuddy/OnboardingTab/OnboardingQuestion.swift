@@ -31,7 +31,7 @@ let onboardingQuestions = [
     OnboardingQuestion(id: 14, mainTitle: "하루에 얼마나 걷나요?", answers: ["3,000걸음 미만", "5,000걸음 미만", "7,000걸음 미만", "10,000걸음 미만", "10,000걸음 이상"]),
     OnboardingQuestion(id: 15, mainTitle: "무릎대고 푸쉬업을 몇 개 할 수 있나요?", answers: ["10개 이하", "11~20개", "21개 이상", "잘 모르겠어요"]),
     OnboardingQuestion(id: 16, mainTitle: "규칙적으로 운동을 하고 있나요?", answers: ["처음이에요", "3개월 이내", "3-6개월", "6-12개월", "1년 이상"]),
-    OnboardingQuestion(id: 17, mainTitle: "규칙적으로 하는 운동은 무엇인가요?", answers: ["헬스/홈트", "크로스핏/HIIT/복싱", "필라테스/요가", "빠르게 걷기", "달리기", "실내 사이클/야외 자전거", "수영"]),
+    OnboardingQuestion(id: 17, mainTitle: "규칙적으로 하는 운동은 무엇인가요?", answers: ["헬스", "홈트", "필라테스/요가", "달리기", "실내 사이클/야외 자전거", "수영"]),
     OnboardingQuestion(id: 18, mainTitle: "일주일에 보통 며칠 운동하나요?", answers: ["1일", "2일", "3일", "4일", "5일", "6일", "7일"]),
     OnboardingQuestion(id: 19, mainTitle: "하루 보통 몇 시간 운동을 하나요?", answers: ["1시간 미만", "1시간 이상 2시간 미만", "2시간 이상 3시간 미만", "3시간 이상 4시간 미만", "4시간 이상 5시간 미만", "5시간 이상"]),
     OnboardingQuestion(id: 20, mainTitle: "코칭 시작 후, 운동량의 변화를 줄 예정인가요?", answers: ["유지할 예정", "늘릴 예정", "줄일 예정"]),

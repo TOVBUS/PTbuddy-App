@@ -27,8 +27,6 @@ struct MainButtonView: View {
     }
 }
 
-
-
 #Preview {
     MainButtonView(buttonText: "다음") {
         print("navigation연결")
