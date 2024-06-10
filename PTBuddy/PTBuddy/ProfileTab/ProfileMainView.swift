@@ -93,16 +93,13 @@ struct ReviewModalView: View {
     
     var body: some View {
         VStack {
-            Text("잠시 후 앱스토어로 이동합니다...")
-                .padding()
-                .onAppear {
                     if let url = URL(string: "https://apps.apple.com") {
                         DispatchQueue.main.asyncAfter(deadline: .now()) {
                             UIApplication.shared.open(url)
                             showReviewPage = false
                         }
                     }
-                }
+                
             Button(action: {
                 showReviewPage = false
             }) {
