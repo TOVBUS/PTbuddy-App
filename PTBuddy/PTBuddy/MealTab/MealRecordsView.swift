@@ -59,7 +59,7 @@ struct MealRecordsView: View {
                     }
                     .background(Color.white)
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 12)
+                                    RoundedRectangle(cornerRadius: 20)
                                         .stroke(Color.black, lineWidth: 2)
                                 )
                                 .padding(.horizontal, 30)

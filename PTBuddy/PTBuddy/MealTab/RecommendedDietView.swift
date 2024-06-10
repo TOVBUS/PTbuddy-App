@@ -14,7 +14,7 @@ struct RecommendedDietView: View {
     var body: some View {
         VStack(alignment: .leading){
             Text("식단")
-                .pretendardFont(.Bold, size: 25)
+                .pretendardFont(.Bold, size: 30)
                 .padding(.bottom, 20)
                 .padding(.leading, 30)
                 .padding(.trailing, 30)
