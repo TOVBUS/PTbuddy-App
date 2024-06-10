@@ -29,7 +29,6 @@ struct ProfileMainView: View {
                         .lineSpacing(5)
                         .padding(.bottom, 20)
                 
-                
                     Text("설정")
                         .pretendardFont(.Bold, size: 20)
                     
