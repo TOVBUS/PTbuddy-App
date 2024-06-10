@@ -17,50 +17,50 @@ struct ProfileMainView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 
-                    Text("오늘의 피드백")
-                        .pretendardFont(.Bold, size: 20)
-                    
-                    Text(feedback)
-                        .pretendardFont(.Regular, size: 20)
+                Text("오늘의 피드백")
+                    .pretendardFont(.Bold, size: 20)
+                
+                Text(feedback)
+                    .pretendardFont(.Regular, size: 20)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.orange.opacity(0.5))
+                    .cornerRadius(20)
+                    .lineSpacing(5)
+                    .padding(.bottom, 20)
+                
+                Text("설정")
+                    .pretendardFont(.Bold, size: 20)
+                
+                Button(action: {
+                    showPrivacyPolicy = true
+                }) {
+                    Text("개인정보처리방침")
+                        .pretendardFont(.Regular, size: 18)
+                        .foregroundColor(.black)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(Color.orange.opacity(0.5))
-                        .cornerRadius(20)
-                        .lineSpacing(5)
-                        .padding(.bottom, 20)
+                        .background(Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                }
                 
-                    Text("설정")
-                        .pretendardFont(.Bold, size: 20)
-                    
-                    Button(action: {
-                        showPrivacyPolicy = true
-                    }) {
-                        Text("개인정보처리방침")
-                            .pretendardFont(.Regular, size: 18)
-                            .foregroundColor(.black)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.black, lineWidth: 1)
-                            )
-                    }
-                    
-                    Button(action: {
-                        showReviewPage = true
-                    }) {
-                        Text("리뷰 남기기")
-                            .pretendardFont(.Regular, size: 18)
-                            .foregroundColor(.black)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.black, lineWidth: 1)
-                            )
-                    }
+                Button(action: {
+                    showReviewPage = true
+                }) {
+                    Text("리뷰 남기기")
+                        .pretendardFont(.Regular, size: 18)
+                        .foregroundColor(.black)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                }
                 
                 Spacer()
             }
@@ -93,13 +93,6 @@ struct ReviewModalView: View {
     
     var body: some View {
         VStack {
-                    if let url = URL(string: "https://apps.apple.com") {
-                        DispatchQueue.main.asyncAfter(deadline: .now()) {
-                            UIApplication.shared.open(url)
-                            showReviewPage = false
-                        }
-                    }
-                
             Button(action: {
                 showReviewPage = false
             }) {
@@ -109,6 +102,15 @@ struct ReviewModalView: View {
             }
         }
         .padding()
+        
+        .onAppear {
+            if let url = URL(string: "https://apps.apple.com") {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    UIApplication.shared.open(url)
+                    showReviewPage = false
+                }
+            }
+        }
     }
 }
 
