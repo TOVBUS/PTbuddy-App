@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ActivityGoal: ObservableObject {
+class ActivityGoal: ObservableObject, Codable {
     // 목표 몸무게는 어떻게 되시나요?
     @Published var goalWeight: String
     // 주요 목표는 무엇인가요? : 근육 증가, 체지방 감소, 현재 상태 유지
@@ -19,12 +19,34 @@ class ActivityGoal: ObservableObject {
     // 일주일에 몇 번 운동하실 예정인가요?
     @Published var activityFrequency: String
 
+    enum CodingKeys: String, CodingKey {
+        case goalWeight, activityGoal, activityPlace, preferenceActivity, activityFrequency
+    }
+
     init(goalWeight: String, activityGoal: String, activityPlace: String, preferenceActivity: String, activityFrequency: String) {
         self.goalWeight = goalWeight
         self.activityGoal = activityGoal
         self.activityPlace = activityPlace
         self.preferenceActivity = preferenceActivity
         self.activityFrequency = activityFrequency
+    }
+
+    required init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        goalWeight = try container.decode(String.self, forKey: .goalWeight)
+        activityGoal = try container.decode(String.self, forKey: .activityGoal)
+        activityPlace = try container.decode(String.self, forKey: .activityPlace)
+        preferenceActivity = try container.decode(String.self, forKey: .preferenceActivity)
+        activityFrequency = try container.decode(String.self, forKey: .activityFrequency)
+    }
+
+    func encode(to encoder: any Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(goalWeight, forKey: .goalWeight)
+        try container.encode(activityGoal, forKey: .activityGoal)
+        try container.encode(activityPlace, forKey: .activityPlace)
+        try container.encode(preferenceActivity, forKey: .preferenceActivity)
+        try container.encode(activityFrequency, forKey: .activityFrequency)
     }
 }
 
