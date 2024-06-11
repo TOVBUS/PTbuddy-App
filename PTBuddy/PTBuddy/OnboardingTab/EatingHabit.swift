@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EatingHabit: ObservableObject {
+class EatingHabit: ObservableObject, Codable {
     // 하루 메인 식사 개수 : 1끼, 2끼, 3끼, 4끼, 5끼
     @Published var mealCount: String
     // 평균 식사량 : 0.5인분, 0.7인분, 1인분, 1.2인분, 1.5인분, 1.5인분초과
@@ -31,5 +31,31 @@ class EatingHabit: ObservableObject {
         self.vegetablePerMealCount = vegetablePerMealCount
         self.waterIntakePerDay = waterIntakePerDay
         self.alcoholIntake = alcoholIntake
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case mealCount, mealAmout, carbohydratePerMealCount, proteinPerMealCount, vegetablePerMealCount, waterIntakePerDay, alcoholIntake
+    }
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        mealCount = try container.decode(String.self, forKey: .mealCount)
+        mealAmout = try container.decode(String.self, forKey: .mealAmout)
+        carbohydratePerMealCount = try container.decode(String.self, forKey: .carbohydratePerMealCount)
+        proteinPerMealCount = try container.decode(String.self, forKey: .proteinPerMealCount)
+        vegetablePerMealCount = try container.decode(String.self, forKey: .vegetablePerMealCount)
+        waterIntakePerDay = try container.decode(String.self, forKey: .waterIntakePerDay)
+        alcoholIntake = try container.decode(String.self, forKey: .alcoholIntake)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(mealCount, forKey: .mealCount)
+        try container.encode(mealAmout, forKey: .mealAmout)
+        try container.encode(carbohydratePerMealCount, forKey: .carbohydratePerMealCount)
+        try container.encode(proteinPerMealCount, forKey: .proteinPerMealCount)
+        try container.encode(vegetablePerMealCount, forKey: .vegetablePerMealCount)
+        try container.encode(waterIntakePerDay, forKey: .waterIntakePerDay)
+        try container.encode(alcoholIntake, forKey: .alcoholIntake)
     }
 }

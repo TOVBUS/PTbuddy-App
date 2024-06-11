@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+//    @EnvironmentObject var onboardingVM: OnboardingViewModel
+
     var body: some View {
-        OnboardingMainView()
+        VStack {
+//            Button("api호출") {
+//                onboardingVM.fetchActivityRoutine()
+//            }
+//            if let activityRoutine = onboardingVM.activityRoutine {
+//                Text("Activity Routine: \(activityRoutine)")
+//            } else {
+//                Text("No data")
+//            }
+        }
     }
 }
 

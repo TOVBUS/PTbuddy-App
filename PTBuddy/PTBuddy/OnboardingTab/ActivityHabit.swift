@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ActivityHabit: ObservableObject {
+class ActivityHabit: ObservableObject, Codable {
     // 평소에 얼마나 움직이나요? : 매우 적은 수준, 가벼운 수준, 일반적인 수준, 매우 많은 수준
     @Published var usualActivity: String
     // 하루에 얼마나 걷나요?
@@ -20,11 +20,11 @@ class ActivityHabit: ObservableObject {
     @Published var regularActivity: String?
     // 일주일에 보통 며칠? : 1일, 2일, ..., 7일
     @Published var regularActivityCount: String?
-    // 하루 몇 시간 운동? pickerview
+    // 하루 몇 시간 운동?
     @Published var activityTimePerDay: String?
     // 운동량 변화 : 유지할 예정, 늘릴 예정, 줄일 예정
     @Published var changeActivity: String?
-    
+
     init(usualActivity: String, dailyStep: String, pushUpCount: String, isRegularActivity: String? = nil, regularActivity: String? = nil, regularActivityCount: String? = nil, activityTimePerDay: String? = nil, changeActivity: String? = nil) {
         self.usualActivity = usualActivity
         self.dailyStep = dailyStep
@@ -34,5 +34,33 @@ class ActivityHabit: ObservableObject {
         self.regularActivityCount = regularActivityCount
         self.activityTimePerDay = activityTimePerDay
         self.changeActivity = changeActivity
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case usualActivity, dailyStep, pushUpCount, isRegularActivity, regularActivity, regularActivityCount, activityTimePerDay, changeActivity
+    }
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        usualActivity = try container.decode(String.self, forKey: .usualActivity)
+        dailyStep = try container.decode(String.self, forKey: .dailyStep)
+        pushUpCount = try container.decode(String.self, forKey: .pushUpCount)
+        isRegularActivity = try container.decodeIfPresent(String.self, forKey: .isRegularActivity)
+        regularActivity = try container.decodeIfPresent(String.self, forKey: .regularActivity)
+        regularActivityCount = try container.decodeIfPresent(String.self, forKey: .regularActivityCount)
+        activityTimePerDay = try container.decodeIfPresent(String.self, forKey: .activityTimePerDay)
+        changeActivity = try container.decodeIfPresent(String.self, forKey: .changeActivity)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(usualActivity, forKey: .usualActivity)
+        try container.encode(dailyStep, forKey: .dailyStep)
+        try container.encode(pushUpCount, forKey: .pushUpCount)
+        try container.encode(isRegularActivity, forKey: .isRegularActivity)
+        try container.encode(regularActivity, forKey: .regularActivity)
+        try container.encode(regularActivityCount, forKey: .regularActivityCount)
+        try container.encode(activityTimePerDay, forKey: .activityTimePerDay)
+        try container.encode(changeActivity, forKey: .changeActivity)
     }
 }
