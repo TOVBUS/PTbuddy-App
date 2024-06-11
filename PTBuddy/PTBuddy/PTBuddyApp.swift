@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PTBuddyApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            ActivityMainView()
+            MealMainView()
+                .modelContainer(for: MealRecord.self)
         }
     }
 }
+

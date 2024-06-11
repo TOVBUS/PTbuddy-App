@@ -208,13 +208,13 @@
 			isa = PBXGroup;
 			children = (
 				C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */,
-				C40CEB4A2C12157300C86273 /* ImagePicker.swift */,
 				C40CEB4C2C12171800C86273 /* MealRecordModel.swift */,
 				C40CEB4E2C1217EF00C86273 /* MealDetailView.swift */,
 				C40CEB502C121CBC00C86273 /* AddMealView.swift */,
 				C40CEB522C121E7C00C86273 /* MealRecordsView.swift */,
 				C40CEB542C121FF300C86273 /* GetDietButton.swift */,
 				C40CEB562C1220B100C86273 /* RecommendedDietView.swift */,
+				C40CEB4A2C12157300C86273 /* ImagePicker.swift */,
 			);
 			path = MealTab;
 			sourceTree = "<group>";
