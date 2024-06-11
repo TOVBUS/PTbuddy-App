@@ -15,9 +15,11 @@ struct MealRecordsView: View {
     @State private var selectedImage: UIImage?
     @State private var showActionSheet: Bool = false
     @State private var showAddMealView: Bool = false
-    @State private var showMealDetailView: Bool = false
     @State private var showImagePicker: Bool = false
     @State private var showCameraPicker: Bool = false
+    @State private var showAlert: Bool = false
+    @State private var showEditMealView: Bool = false
+    @State private var editMealRecord: MealRecord?
     
     @Query private var meals: [MealRecord]
     
@@ -26,43 +28,73 @@ struct MealRecordsView: View {
             Text("식사기록")
                 .pretendardFont(.Bold, size: 25)
                 .padding(.bottom, 20)
-                .padding(.leading, 30)
-                .padding(.trailing, 30)
+                .padding(.horizontal, 20) // 좌우 패딩을 줄임
             
             ForEach(["아침", "점심", "저녁", "간식"], id: \.self) { mealType in
                 VStack(alignment: .leading) {
-                    HStack {
-                        Text(mealType)
-                            .pretendardFont(.Bold, size: 20)
-                            .padding(8)
-                            .onTapGesture {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(mealType)
+                                .pretendardFont(.Bold, size: 20)
+                                .padding(8)
+                            
+                            Spacer()
+                            
+                            Button(action: {
                                 selectedMealType = mealType
-                                if let mealRecord = meals.first(where: { $0.type == mealType }), !mealRecord.notes.isEmpty || !mealRecord.images.isEmpty {
-                                    showMealDetailView = true
+                                showActionSheet = true
+                            }) {
+                                Image(systemName: "plus")
+                                    .padding()
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        .background(Color.white)
+                        .padding(.horizontal, 20) // 좌우 패딩을 줄임
+                        
+                        if let mealRecord = meals.first(where: { $0.type == mealType }) {
+                            HStack {
+                                if !mealRecord.images.isEmpty, let imageData = mealRecord.images.first, let image = UIImage(data: imageData) {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 100, height: 80)
+                                        .padding(.bottom, 10)
+                                }
+                                
+                                if !mealRecord.notes.isEmpty {
+                                    Text(mealRecord.notes)
+                                        .padding()
+                                        .frame(width: 180, height: 80) // 고정된 크기 설정
+                                        .background(Color.orange.opacity(0.3))
+                                        .cornerRadius(20) // 동일한 코너 반경
+                                        .padding(.horizontal, 10)
+                                        .onTapGesture {
+                                            editMealRecord = mealRecord
+                                            showEditMealView = true
+                                        }
                                 } else {
-                                    showAddMealView = true
+                                    Text("")
+                                        .padding()
+                                        .frame(width: 100, height: 80) // 고정된 크기 설정
+                                        .background(Color.orange.opacity(0.3))
+                                        .cornerRadius(20) // 동일한 코너 반경
+                                        .padding(.horizontal, 10)
                                 }
                             }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            selectedMealType = mealType
-                            showActionSheet = true
-                        }) {
-                            Image(systemName: "plus")
-                                .padding()
-                                .foregroundColor(.black)
+                            .padding(.horizontal, 20) // 좌우 패딩을 줄임
+                            .padding(.bottom, 10)
                         }
                     }
                     .background(Color.white)
+                    .cornerRadius(20)
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.black, lineWidth: 2)
                     )
-                    .padding(.horizontal, 30)
+                    .padding(.horizontal, 20) // 좌우 패딩을 줄임
+                    .padding(.bottom, 5)
                 }
-                .padding(.bottom, 5)
             }
         }
         .actionSheet(isPresented: $showActionSheet) {
@@ -74,36 +106,72 @@ struct MealRecordsView: View {
                     showImagePicker = true
                 },
                 .default(Text("메모하기")) {
-                    showAddMealView = true
+                    if let mealType = selectedMealType, let _ = meals.first(where: { $0.type == mealType }) {
+                        showAlert = true
+                    } else {
+                        showAddMealView = true
+                    }
                 },
                 .destructive(Text("취소"))
             ])
         }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("메모 수정"),
+                message: Text("이전 메모를 수정하시겠습니까?"),
+                primaryButton: .default(Text("수정하기"), action: {
+                    if let mealType = selectedMealType, let mealRecord = meals.first(where: { $0.type == mealType }) {
+                        editMealRecord = mealRecord
+                        showEditMealView = true
+                    }
+                }),
+                secondaryButton: .cancel(Text("취소"))
+            )
+        }
         .sheet(isPresented: $showAddMealView) {
             if let mealType = selectedMealType {
                 AddMealView(mealType: mealType) { newMealRecord in
-                    withAnimation {
-                        context.insert(newMealRecord)
-                        do {
-                            try context.save()
-                        } catch {
-                            print("Failed to save context: \(error.localizedDescription)")
+                    if let existingMeal = meals.first(where: { $0.type == mealType }) {
+                        withAnimation {
+                            existingMeal.notes = newMealRecord.notes
+                            if !newMealRecord.images.isEmpty {
+                                existingMeal.images = newMealRecord.images
+                            }
+                            do {
+                                try context.save()
+                            } catch {
+                                print("Failed to save context: \(error.localizedDescription)")
+                            }
+                        }
+                    } else {
+                        withAnimation {
+                            context.insert(newMealRecord)
+                            do {
+                                try context.save()
+                            } catch {
+                                print("Failed to save context: \(error.localizedDescription)")
+                            }
                         }
                     }
                     showAddMealView = false
                 }
             }
         }
-        .sheet(isPresented: $showMealDetailView) {
-            if let mealType = selectedMealType, let mealRecord = meals.first(where: { $0.type == mealType }) {
-                MealDetailView(mealRecord: mealRecord, mealType: mealType) { updatedMealRecord in
+        .sheet(isPresented: $showEditMealView) {
+            if let mealRecord = editMealRecord {
+                EditMealView(mealRecord: mealRecord) { updatedMealRecord in
                     withAnimation {
+                        mealRecord.notes = updatedMealRecord.notes
+                        if !updatedMealRecord.images.isEmpty {
+                            mealRecord.images = updatedMealRecord.images
+                        }
                         do {
                             try context.save()
                         } catch {
                             print("Failed to save context: \(error.localizedDescription)")
                         }
                     }
+                    showEditMealView = false
                 }
             }
         }
@@ -114,7 +182,7 @@ struct MealRecordsView: View {
                        let mealType = selectedMealType,
                        let mealRecord = meals.first(where: { $0.type == mealType }) {
                         withAnimation {
-                            mealRecord.images.append(selectedImage.jpegData(compressionQuality: 1.0)!)
+                            mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
                             do {
                                 try context.save()
                             } catch {
@@ -131,7 +199,7 @@ struct MealRecordsView: View {
                        let mealType = selectedMealType,
                        let mealRecord = meals.first(where: { $0.type == mealType }) {
                         withAnimation {
-                            mealRecord.images.append(selectedImage.jpegData(compressionQuality: 1.0)!)
+                            mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
                             do {
                                 try context.save()
                             } catch {
@@ -150,4 +218,5 @@ struct MealRecordsView_Previews: PreviewProvider {
             .modelContainer(for: MealRecord.self, inMemory: true) // Preview용 inMemory 설정
     }
 }
+
 

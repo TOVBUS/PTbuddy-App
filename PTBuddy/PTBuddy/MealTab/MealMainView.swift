@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MealMainView: View {
     var body: some View {
-        ScrollView{
-            VStack(alignment: .leading){
+        ScrollView {
+            VStack(alignment: .leading) {
                 RecommendedDietView()
                 
                 MealRecordsView()
@@ -19,11 +19,13 @@ struct MealMainView: View {
                 
                 GetDietButton()
             }
-
+            .padding(.horizontal) // 가로 패딩 추가
         }
     }
 }
 
 #Preview {
     MealMainView()
+        .modelContainer(for: MealRecord.self, inMemory: true) // Preview용 inMemory 설정
 }
+
