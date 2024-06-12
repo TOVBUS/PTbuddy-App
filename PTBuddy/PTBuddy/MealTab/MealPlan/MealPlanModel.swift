@@ -29,3 +29,7 @@ struct MealPlanResponse: Codable {
     var responses: [String]
     var message: String
 }
+
+
+
+

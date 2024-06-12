@@ -19,8 +19,8 @@ struct MealMainView: View {
                 RecommendedDietView()
                     .environmentObject(viewModel)
 
-                MealRecordsView()
-                    .environmentObject(viewModel)
+                 MealRecordsView()
+                     .environmentObject(viewModel)
 
                 Spacer()
 
@@ -42,6 +42,9 @@ struct MealMainView: View {
 //            .modelContainer(for: [MealRecord.self, MealPlan.self], inMemory: true)
 //    }
 //}
+
+
+
 
 
 

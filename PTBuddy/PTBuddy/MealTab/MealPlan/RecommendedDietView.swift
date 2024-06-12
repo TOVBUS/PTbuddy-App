@@ -29,7 +29,7 @@ struct RecommendedDietView: View {
             }
             .padding()
             .frame(maxWidth: .infinity)
-            .background(Color.orange.opacity(0.5))
+            .background(Color.orange.opacity(0.2))
             .cornerRadius(20)
             .padding(.bottom, 20)
             .padding(.horizontal, 30)
@@ -71,9 +71,10 @@ struct MealDetailView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(mealType)
-                .pretendardFont(.Bold, size: 16)
+                .font(.system(size: 18, weight: .bold))
+                .foregroundColor(.gray)
             Text(mealDetail)
-                .pretendardFont(.Regular, size: 16)
+                .font(.system(size: 16))
                 .padding(.bottom, 5)
         }
     }
@@ -85,10 +86,6 @@ struct RecommendedDietView_Previews: PreviewProvider {
             .environmentObject(MealPlanViewModel())
     }
 }
-
-
-
-
 
 
 

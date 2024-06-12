@@ -43,7 +43,7 @@ class MealPlanViewModel: ObservableObject {
 
 
     func fetchMealPlanFromAPI() {
-        guard let url = URL(string: "http://localhost:3001/ai/meal-routine") else { return }
+        guard let url = URL(string: "https://ai-ptbuddy.openai.azure.com/ai/meal-routine") else { return }
 
         let onboardingMemberInfo = OnboardingMemberInfo(
             basicInfo: BasicInfo(nick: "토브", gender: "여성", birth: "19981118", height: "160", weight: "50"),
@@ -143,6 +143,18 @@ class MealPlanViewModel: ObservableObject {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

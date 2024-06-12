@@ -36,8 +36,9 @@
 		C40CEB7A2C12E52700C86273 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB792C12E52700C86273 /* WebView.swift */; };
 		C40CEB812C18266200C86273 /* EditMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB802C18266200C86273 /* EditMealView.swift */; };
 		C40CEB852C18488E00C86273 /* MealPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB842C18488E00C86273 /* MealPlanViewModel.swift */; };
-		C40CEB8A2C19218C00C86273 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C40CEB892C19218C00C86273 /* Alamofire */; };
 		C40CEB952C1942CC00C86273 /* MealPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB942C1942CC00C86273 /* MealPlanModel.swift */; };
+		C40CEB982C198DAA00C86273 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C40CEB972C198DAA00C86273 /* Alamofire */; };
+		C40CEB9C2C19BE2900C86273 /* MealRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */; };
 		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
 		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
 		C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */; };
@@ -93,6 +94,7 @@
 		C40CEB802C18266200C86273 /* EditMealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMealView.swift; sourceTree = "<group>"; };
 		C40CEB842C18488E00C86273 /* MealPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewModel.swift; sourceTree = "<group>"; };
 		C40CEB942C1942CC00C86273 /* MealPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanModel.swift; sourceTree = "<group>"; };
+		C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordViewModel.swift; sourceTree = "<group>"; };
 		C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
 		C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMainView.swift; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40CEB8A2C19218C00C86273 /* Alamofire in Frameworks */,
+				C40CEB982C198DAA00C86273 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +225,7 @@
 			children = (
 				C40CEB4C2C12171800C86273 /* MealRecordModel.swift */,
 				C40CEB522C121E7C00C86273 /* MealRecordsView.swift */,
+				C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */,
 				C40CEB502C121CBC00C86273 /* AddMealView.swift */,
 				C40CEB802C18266200C86273 /* EditMealView.swift */,
 				C40CEB4A2C12157300C86273 /* ImagePicker.swift */,
@@ -306,7 +309,7 @@
 			);
 			name = PTBuddy;
 			packageProductDependencies = (
-				C40CEB892C19218C00C86273 /* Alamofire */,
+				C40CEB972C198DAA00C86273 /* Alamofire */,
 			);
 			productName = PTBuddy;
 			productReference = 3E1601782C0DAD7F009466A3 /* PTBuddy.app */;
@@ -337,7 +340,7 @@
 			);
 			mainGroup = 3E16016F2C0DAD7F009466A3;
 			packageReferences = (
-				C40CEB882C19218C00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C40CEB962C198DAA00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3E1601792C0DAD7F009466A3 /* Products */;
 			projectDirPath = "";
@@ -400,6 +403,7 @@
 				C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */,
 				C40CEB4B2C12157300C86273 /* ImagePicker.swift in Sources */,
 				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
+				C40CEB9C2C19BE2900C86273 /* MealRecordViewModel.swift in Sources */,
 				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
 				E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
@@ -547,7 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PTBuddy/Preview Content\"";
-				DEVELOPMENT_TEAM = 62SDS28JUT;
+				DEVELOPMENT_TEAM = UKLH9728KV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTBuddy/Info.plist;
@@ -561,7 +565,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.kibwa.yeonios.PTBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kibwa.yeonios.ptbuddy-jh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -581,7 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PTBuddy/Preview Content\"";
-				DEVELOPMENT_TEAM = 62SDS28JUT;
+				DEVELOPMENT_TEAM = UKLH9728KV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTBuddy/Info.plist;
@@ -595,7 +599,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.kibwa.yeonios.PTBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kibwa.yeonios.ptbuddy-jh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -631,7 +635,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C40CEB882C19218C00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		C40CEB962C198DAA00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -642,9 +646,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C40CEB892C19218C00C86273 /* Alamofire */ = {
+		C40CEB972C198DAA00C86273 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C40CEB882C19218C00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = C40CEB962C198DAA00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
