@@ -17,9 +17,12 @@ struct MealRecordsView: View {
     @State private var showAddMealView: Bool = false
     @State private var showImagePicker: Bool = false
     @State private var showCameraPicker: Bool = false
+<<<<<<< HEAD
     @State private var showAlert: Bool = false
     @State private var showEditMealView: Bool = false
     @State private var editMealRecord: MealRecord?
+=======
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
     
     @Query private var meals: [MealRecord]
     
@@ -32,6 +35,7 @@ struct MealRecordsView: View {
             
             ForEach(["아침", "점심", "저녁", "간식"], id: \.self) { mealType in
                 VStack(alignment: .leading) {
+<<<<<<< HEAD
                     VStack(alignment: .leading) {
                         HStack {
                             Text(mealType)
@@ -47,6 +51,19 @@ struct MealRecordsView: View {
                                 Image(systemName: "plus")
                                     .padding()
                                     .foregroundColor(.black)
+=======
+                    HStack {
+                        Text(mealType)
+                            .pretendardFont(.Bold, size: 20)
+                            .padding(8)
+                            .onTapGesture {
+                                selectedMealType = mealType
+                                if let mealRecord = meals.first(where: { $0.type == mealType }), !mealRecord.notes.isEmpty || !mealRecord.images.isEmpty {
+                                    showMealDetailView = true
+                                } else {
+                                    showAddMealView = true
+                                }
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                             }
                         }
                         .background(Color.white)
@@ -87,13 +104,20 @@ struct MealRecordsView: View {
                         }
                     }
                     .background(Color.white)
+<<<<<<< HEAD
                     .cornerRadius(20)
+=======
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.black, lineWidth: 2)
                     )
+<<<<<<< HEAD
                     .padding(.horizontal, 20) // 좌우 패딩을 줄임
                     .padding(.bottom, 5)
+=======
+                    .padding(.horizontal, 30)
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                 }
             }
         }
@@ -106,15 +130,20 @@ struct MealRecordsView: View {
                     showImagePicker = true
                 },
                 .default(Text("메모하기")) {
+<<<<<<< HEAD
                     if let mealType = selectedMealType, let _ = meals.first(where: { $0.type == mealType }) {
                         showAlert = true
                     } else {
                         showAddMealView = true
                     }
+=======
+                    showAddMealView = true
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                 },
                 .destructive(Text("취소"))
             ])
         }
+<<<<<<< HEAD
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("메모 수정"),
@@ -151,12 +180,24 @@ struct MealRecordsView: View {
                             } catch {
                                 print("Failed to save context: \(error.localizedDescription)")
                             }
+=======
+        .sheet(isPresented: $showAddMealView) {
+            if let mealType = selectedMealType {
+                AddMealView(mealType: mealType) { newMealRecord in
+                    withAnimation {
+                        context.insert(newMealRecord)
+                        do {
+                            try context.save()
+                        } catch {
+                            print("Failed to save context: \(error.localizedDescription)")
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                         }
                     }
                     showAddMealView = false
                 }
             }
         }
+<<<<<<< HEAD
         .sheet(isPresented: $showEditMealView) {
             if let mealRecord = editMealRecord {
                 EditMealView(mealRecord: mealRecord) { updatedMealRecord in
@@ -165,13 +206,22 @@ struct MealRecordsView: View {
                         if !updatedMealRecord.images.isEmpty {
                             mealRecord.images = updatedMealRecord.images
                         }
+=======
+        .sheet(isPresented: $showMealDetailView) {
+            if let mealType = selectedMealType, let mealRecord = meals.first(where: { $0.type == mealType }) {
+                MealDetailView(mealRecord: mealRecord, mealType: mealType) { updatedMealRecord in
+                    withAnimation {
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                         do {
                             try context.save()
                         } catch {
                             print("Failed to save context: \(error.localizedDescription)")
                         }
                     }
+<<<<<<< HEAD
                     showEditMealView = false
+=======
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                 }
             }
         }
@@ -182,7 +232,11 @@ struct MealRecordsView: View {
                        let mealType = selectedMealType,
                        let mealRecord = meals.first(where: { $0.type == mealType }) {
                         withAnimation {
+<<<<<<< HEAD
                             mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
+=======
+                            mealRecord.images.append(selectedImage.jpegData(compressionQuality: 1.0)!)
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                             do {
                                 try context.save()
                             } catch {
@@ -199,7 +253,11 @@ struct MealRecordsView: View {
                        let mealType = selectedMealType,
                        let mealRecord = meals.first(where: { $0.type == mealType }) {
                         withAnimation {
+<<<<<<< HEAD
                             mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
+=======
+                            mealRecord.images.append(selectedImage.jpegData(compressionQuality: 1.0)!)
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
                             do {
                                 try context.save()
                             } catch {
@@ -219,4 +277,7 @@ struct MealRecordsView_Previews: PreviewProvider {
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
