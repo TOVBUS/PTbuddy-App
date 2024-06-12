@@ -10,10 +10,11 @@ import SwiftData
 
 @main
 struct PTBuddyApp: App {
+    @StateObject private var onboardingVM = OnboardingViewModel()
     var body: some Scene {
         WindowGroup {
-            MealMainView()
-                .modelContainer(for: [MealRecord.self, MealPlan.self])
+            ContentView()
+                .environmentObject(onboardingVM)
         }
     }
 }
