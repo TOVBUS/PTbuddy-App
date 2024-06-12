@@ -12,11 +12,24 @@ import Alamofire
 class OnboardingService {
     static let shared = OnboardingService()
 
-    func getActivityRoutine(_ onboardingMemberInfo: OnboardingMemberInfo) -> AnyPublisher<ResponseActivityRoutine, AFError> {
+    func getActivityRoutine(_ onboardingMemberInfo: OnboardingMemberInfo) -> AnyPublisher<ActivityRoutineRoot, AFError> {
         let url = "http://localhost:3001/ai/activity-routine"
         return AF.request(url, method: .post, parameters: onboardingMemberInfo, encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: ResponseActivityRoutine.self)
+            .publishDecodable(type: ActivityRoutineRoot.self)
             .value()
+//            .map {
+//                do {
+//                    if let data = $0.responses[0].data(using: .utf8) {
+//                        let data = try JSONDecoder().decode(ActivityWeeklyRoutine.self, from: data)
+//                        print(data)
+//                    } else {
+//
+//                    }
+//                }
+//                catch {
+//                    print(error.localizedDescription)
+//                }
+//            }
             .eraseToAnyPublisher()
     }
 }

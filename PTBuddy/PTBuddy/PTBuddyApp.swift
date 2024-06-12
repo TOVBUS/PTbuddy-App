@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct PTBuddyApp: App {
-//    @StateObject private var onboardingVM = OnboardingViewModel()
+    @StateObject private var onboardingVM = OnboardingViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
-//                .environmentObject(onboardingVM)
+                .environmentObject(onboardingVM)
         }
     }
 }

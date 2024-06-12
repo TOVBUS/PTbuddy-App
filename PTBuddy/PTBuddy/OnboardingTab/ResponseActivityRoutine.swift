@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ResponseActivityRoutine: Codable {
-    let success: Bool
-    let responses: [String]
-    let message: String
-}
+//struct ResponseActivityRoutine: Codable {
+//    let success: Bool
+//    let responses: [String]
+//    let message: String
+//}
