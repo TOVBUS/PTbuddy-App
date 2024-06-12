@@ -28,13 +28,17 @@
 		8F4D425F2C15F3ED00A16350 /* ActivityConditionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D425E2C15F3ED00A16350 /* ActivityConditionListView.swift */; };
 		C40CEB4B2C12157300C86273 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB4A2C12157300C86273 /* ImagePicker.swift */; };
 		C40CEB4D2C12171800C86273 /* MealRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB4C2C12171800C86273 /* MealRecordModel.swift */; };
-		C40CEB4F2C1217EF00C86273 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB4E2C1217EF00C86273 /* MealDetailView.swift */; };
 		C40CEB512C121CBC00C86273 /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB502C121CBC00C86273 /* AddMealView.swift */; };
 		C40CEB532C121E7C00C86273 /* MealRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB522C121E7C00C86273 /* MealRecordsView.swift */; };
 		C40CEB552C121FF300C86273 /* GetDietButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB542C121FF300C86273 /* GetDietButton.swift */; };
 		C40CEB572C1220B100C86273 /* RecommendedDietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB562C1220B100C86273 /* RecommendedDietView.swift */; };
 		C40CEB5A2C12B0C700C86273 /* ProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB592C12B0C700C86273 /* ProfileMainView.swift */; };
 		C40CEB7A2C12E52700C86273 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB792C12E52700C86273 /* WebView.swift */; };
+		C40CEB812C18266200C86273 /* EditMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB802C18266200C86273 /* EditMealView.swift */; };
+		C40CEB852C18488E00C86273 /* MealPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB842C18488E00C86273 /* MealPlanViewModel.swift */; };
+		C40CEB952C1942CC00C86273 /* MealPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB942C1942CC00C86273 /* MealPlanModel.swift */; };
+		C40CEB982C198DAA00C86273 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C40CEB972C198DAA00C86273 /* Alamofire */; };
+		C40CEB9C2C19BE2900C86273 /* MealRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */; };
 		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
 		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
 		C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */; };
@@ -52,7 +56,6 @@
 		E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */; };
 		E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC32C14B7FB00CEE6CE /* OnboardingDatePickerView.swift */; };
 		E1F6CDC62C17EED800CEE6CE /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC52C17EED800CEE6CE /* OnboardingService.swift */; };
-		E1F6CDC92C17EF5300CEE6CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E1F6CDC82C17EF5300CEE6CE /* Alamofire */; };
 		E1F6CDCB2C18229D00CEE6CE /* ResponseActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCA2C18229D00CEE6CE /* ResponseActivityRoutine.swift */; };
 		E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCC2C18427400CEE6CE /* OnboardingViewModel.swift */; };
 		E1F6CDCF2C18482E00CEE6CE /* ActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCE2C18482E00CEE6CE /* ActivityRoutine.swift */; };
@@ -82,13 +85,16 @@
 		8F4D425E2C15F3ED00A16350 /* ActivityConditionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityConditionListView.swift; sourceTree = "<group>"; };
 		C40CEB4A2C12157300C86273 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C40CEB4C2C12171800C86273 /* MealRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordModel.swift; sourceTree = "<group>"; };
-		C40CEB4E2C1217EF00C86273 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		C40CEB502C121CBC00C86273 /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		C40CEB522C121E7C00C86273 /* MealRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordsView.swift; sourceTree = "<group>"; };
 		C40CEB542C121FF300C86273 /* GetDietButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDietButton.swift; sourceTree = "<group>"; };
 		C40CEB562C1220B100C86273 /* RecommendedDietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedDietView.swift; sourceTree = "<group>"; };
 		C40CEB592C12B0C700C86273 /* ProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainView.swift; sourceTree = "<group>"; };
 		C40CEB792C12E52700C86273 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C40CEB802C18266200C86273 /* EditMealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMealView.swift; sourceTree = "<group>"; };
+		C40CEB842C18488E00C86273 /* MealPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewModel.swift; sourceTree = "<group>"; };
+		C40CEB942C1942CC00C86273 /* MealPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanModel.swift; sourceTree = "<group>"; };
+		C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordViewModel.swift; sourceTree = "<group>"; };
 		C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
 		C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMainView.swift; sourceTree = "<group>"; };
@@ -116,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1F6CDC92C17EF5300CEE6CE /* Alamofire in Frameworks */,
+				C40CEB982C198DAA00C86273 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,17 +220,36 @@
 			path = ProfileTab;
 			sourceTree = "<group>";
 		};
+		C40CEB8D2C19342800C86273 /* MealRecord */ = {
+			isa = PBXGroup;
+			children = (
+				C40CEB4C2C12171800C86273 /* MealRecordModel.swift */,
+				C40CEB522C121E7C00C86273 /* MealRecordsView.swift */,
+				C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */,
+				C40CEB502C121CBC00C86273 /* AddMealView.swift */,
+				C40CEB802C18266200C86273 /* EditMealView.swift */,
+				C40CEB4A2C12157300C86273 /* ImagePicker.swift */,
+			);
+			path = MealRecord;
+			sourceTree = "<group>";
+		};
+		C40CEB8E2C19348B00C86273 /* MealPlan */ = {
+			isa = PBXGroup;
+			children = (
+				C40CEB942C1942CC00C86273 /* MealPlanModel.swift */,
+				C40CEB842C18488E00C86273 /* MealPlanViewModel.swift */,
+				C40CEB562C1220B100C86273 /* RecommendedDietView.swift */,
+				C40CEB542C121FF300C86273 /* GetDietButton.swift */,
+			);
+			path = MealPlan;
+			sourceTree = "<group>";
+		};
 		C42EB1E22C0FFF7A0031C3FF /* MealTab */ = {
 			isa = PBXGroup;
 			children = (
 				C42EB1E92C0FFFE10031C3FF /* MealMainView.swift */,
-				C40CEB4A2C12157300C86273 /* ImagePicker.swift */,
-				C40CEB4C2C12171800C86273 /* MealRecordModel.swift */,
-				C40CEB4E2C1217EF00C86273 /* MealDetailView.swift */,
-				C40CEB502C121CBC00C86273 /* AddMealView.swift */,
-				C40CEB522C121E7C00C86273 /* MealRecordsView.swift */,
-				C40CEB542C121FF300C86273 /* GetDietButton.swift */,
-				C40CEB562C1220B100C86273 /* RecommendedDietView.swift */,
+				C40CEB8E2C19348B00C86273 /* MealPlan */,
+				C40CEB8D2C19342800C86273 /* MealRecord */,
 			);
 			path = MealTab;
 			sourceTree = "<group>";
@@ -284,7 +309,7 @@
 			);
 			name = PTBuddy;
 			packageProductDependencies = (
-				E1F6CDC82C17EF5300CEE6CE /* Alamofire */,
+				C40CEB972C198DAA00C86273 /* Alamofire */,
 			);
 			productName = PTBuddy;
 			productReference = 3E1601782C0DAD7F009466A3 /* PTBuddy.app */;
@@ -315,7 +340,7 @@
 			);
 			mainGroup = 3E16016F2C0DAD7F009466A3;
 			packageReferences = (
-				E1F6CDC72C17EF5300CEE6CE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C40CEB962C198DAA00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3E1601792C0DAD7F009466A3 /* Products */;
 			projectDirPath = "";
@@ -352,11 +377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40CEB852C18488E00C86273 /* MealPlanViewModel.swift in Sources */,
 				E1F6CDC02C11983300CEE6CE /* OnboardingQuestionView.swift in Sources */,
 				E1F6CDB62C10542800CEE6CE /* OnboardingSubTitleView.swift in Sources */,
 				C40CEB552C121FF300C86273 /* GetDietButton.swift in Sources */,
 				C40CEB572C1220B100C86273 /* RecommendedDietView.swift in Sources */,
-				C40CEB4F2C1217EF00C86273 /* MealDetailView.swift in Sources */,
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */,
 				E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */,
@@ -370,6 +395,7 @@
 				E1F6CDB42C10535E00CEE6CE /* OnboardingMainTitleView.swift in Sources */,
 				8F4D425F2C15F3ED00A16350 /* ActivityConditionListView.swift in Sources */,
 				8F4D425D2C15E6E700A16350 /* ActivityTimeListView.swift in Sources */,
+				C40CEB812C18266200C86273 /* EditMealView.swift in Sources */,
 				8F4D425B2C15DD9700A16350 /* ActivityRoutineRow.swift in Sources */,
 				8F4D42592C15DA7800A16350 /* ActivityRoutineListView.swift in Sources */,
 				3E760D072C129C5B00DEC9F1 /* ActivityViewModel.swift in Sources */,
@@ -377,6 +403,7 @@
 				C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */,
 				C40CEB4B2C12157300C86273 /* ImagePicker.swift in Sources */,
 				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
+				C40CEB9C2C19BE2900C86273 /* MealRecordViewModel.swift in Sources */,
 				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
 				E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
@@ -384,6 +411,7 @@
 				E1F6CDAA2C103F7400CEE6CE /* BasicInfo.swift in Sources */,
 				E1F6CDBA2C10548600CEE6CE /* OnboardingMainButtonView.swift in Sources */,
 				E1F6CDB82C10546D00CEE6CE /* OnboardingButtonView.swift in Sources */,
+				C40CEB952C1942CC00C86273 /* MealPlanModel.swift in Sources */,
 				E1F6CDC62C17EED800CEE6CE /* OnboardingService.swift in Sources */,
 				E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */,
 				E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */,
@@ -523,7 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PTBuddy/Preview Content\"";
-				DEVELOPMENT_TEAM = 62SDS28JUT;
+				DEVELOPMENT_TEAM = UKLH9728KV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTBuddy/Info.plist;
@@ -537,7 +565,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.kibwa.yeonios.PTBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kibwa.yeonios.ptbuddy-jh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -557,7 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PTBuddy/Preview Content\"";
-				DEVELOPMENT_TEAM = 62SDS28JUT;
+				DEVELOPMENT_TEAM = UKLH9728KV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTBuddy/Info.plist;
@@ -571,7 +599,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.kibwa.yeonios.PTBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kibwa.yeonios.ptbuddy-jh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -607,7 +635,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E1F6CDC72C17EF5300CEE6CE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		C40CEB962C198DAA00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -618,9 +646,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E1F6CDC82C17EF5300CEE6CE /* Alamofire */ = {
+		C40CEB972C198DAA00C86273 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E1F6CDC72C17EF5300CEE6CE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = C40CEB962C198DAA00C86273 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

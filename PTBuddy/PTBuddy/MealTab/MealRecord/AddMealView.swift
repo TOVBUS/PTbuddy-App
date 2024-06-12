@@ -6,20 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AddMealView: View {
     
-    @State var mealRecord: MealRecord
-    let mealType: String
-    var onSave: (MealRecord) -> Void
+    @Environment(\.modelContext) var context
     @Environment(\.presentationMode) var presentationMode
+    @State var mealType: String
+    @State var mealRecord = MealRecord(type: "")
+    
+    var onSave: (MealRecord) -> Void
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 Text("기록하고 싶은 내용을 자유롭게 써주세요!")
                     .pretendardFont(.Regular, size: 18)
-                    //.padding(.bottom, 10)
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
@@ -33,13 +35,21 @@ struct AddMealView: View {
                 }
                 .frame(height: 500)
                 .padding()
-                //.padding(.horizontal, 30)
                 
                 Spacer()
                 
                 Button(action: {
-                    onSave(mealRecord)
-                    presentationMode.wrappedValue.dismiss()
+                    mealRecord.type = mealType
+                    withAnimation {
+                        context.insert(mealRecord)
+                        do {
+                            try context.save()
+                            onSave(mealRecord)
+                            presentationMode.wrappedValue.dismiss()
+                        } catch {
+                            print("Failed to save context: \(error.localizedDescription)")
+                        }
+                    }
                 }) {
                     Text("메모 추가하기")
                         .foregroundColor(.white)
@@ -49,7 +59,6 @@ struct AddMealView: View {
                         .cornerRadius(10)
                 }
                 .padding()
-                //.padding(.horizontal, 30)
             }
             .padding()
             .navigationTitle("식단메모")
@@ -67,9 +76,5 @@ struct AddMealView: View {
     }
 }
 
-struct AddMealView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddMealView(mealRecord: MealRecord(type: "아침"), mealType: "아침") { _ in }
-    }
-}
+
 

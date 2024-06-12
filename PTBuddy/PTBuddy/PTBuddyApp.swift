@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PTBuddyApp: App {
-//    @StateObject private var onboardingVM = OnboardingViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-//                .environmentObject(onboardingVM)
+            MealMainView()
+                .modelContainer(for: [MealRecord.self, MealPlan.self])
         }
     }
 }
+
+
+
+
