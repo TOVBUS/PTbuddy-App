@@ -14,12 +14,12 @@ struct RecommendedDietView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("식단")
-                .font(.system(size: 30, weight: .bold))
+                .pretendardFont(.Bold, size: 25)
                 .padding(.bottom, 20)
                 .padding(.horizontal, 30)
             
             Text("오늘의 추천식단")
-                .font(.system(size: 20, weight: .bold))
+                .pretendardFont(.Bold, size: 20)
                 .padding(.horizontal, 30)
             
             VStack(alignment: .leading, spacing: 10) {
@@ -71,10 +71,9 @@ struct MealDetailView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(mealType)
-                .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.gray)
+                .pretendardFont(.Bold, size: 16)
             Text(mealDetail)
-                .font(.system(size: 16))
+                .pretendardFont(.Regular, size: 16)
                 .padding(.bottom, 5)
         }
     }
