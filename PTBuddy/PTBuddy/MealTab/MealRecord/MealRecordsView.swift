@@ -81,6 +81,7 @@ struct MealRecordsView: View {
                                 
                                 if !mealRecord.notes.isEmpty {
                                     Text(mealRecord.notes)
+                                        .pretendardFont(.Regular, size: 16)
                                         .padding()
                                         .frame(width: 180, height: 80) // 고정된 크기 설정
                                         .background(Color.orange.opacity(0.3))
@@ -277,7 +278,10 @@ struct MealRecordsView_Previews: PreviewProvider {
     }
 }
 
+<<<<<<< HEAD:PTBuddy/PTBuddy/MealTab/MealRecordsView.swift
 <<<<<<< HEAD
 
 =======
 >>>>>>> ce87e90 (✨ :: MealTab에 SwiftData 적용 #15 | fix conflict)
+=======
+>>>>>>> 5eefa36 (🎨 :: SafeArea에 View침범 못하게 수정, font 수정 #5):PTBuddy/PTBuddy/MealTab/MealRecord/MealRecordsView.swift
