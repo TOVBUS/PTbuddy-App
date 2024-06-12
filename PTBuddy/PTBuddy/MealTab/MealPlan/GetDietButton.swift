@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct GetDietButton: View {
+    let action: () -> Void
+
     var body: some View {
-        Button(action:{
-            //식단 추천 받는 로직 추가
-        }) {
+        Button(action: action) {
             Text("식단 추천 받기")
-                .pretendardFont(.Bold, size: 20)
+                .font(.system(size: 20, weight: .bold))
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background(Color.orange)
@@ -23,10 +23,14 @@ struct GetDietButton: View {
         .padding(.top, 20)
         .padding(.leading, 30)
         .padding(.trailing, 30)
-
     }
 }
 
-#Preview {
-    GetDietButton()
+struct GetDietButton_Previews: PreviewProvider {
+    static var previews: some View {
+        GetDietButton(action: {})
+    }
 }
+
+
+

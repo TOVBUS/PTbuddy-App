@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PTBuddyApp: App {
@@ -17,3 +18,7 @@ struct PTBuddyApp: App {
         }
     }
 }
+
+
+
+

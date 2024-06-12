@@ -6,24 +6,57 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MealMainView: View {
-    var body: some View {
-        ScrollView{
-            VStack(alignment: .leading){
-                RecommendedDietView()
-                
-                MealRecordsView()
-                
-                Spacer()
-                
-                GetDietButton()
-            }
+    @Environment(\.modelContext) private var context: ModelContext
 
+    @StateObject private var viewModel = MealPlanViewModel()
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading) {
+                RecommendedDietView()
+                    .environmentObject(viewModel)
+
+                 MealRecordsView()
+                     .environmentObject(viewModel)
+
+                Spacer()
+
+                GetDietButton(action: viewModel.fetchMealPlanFromAPI)
+            }
+            .padding(.horizontal)
+        }
+        .background(Color(.systemBackground).edgesIgnoringSafeArea(.all))
+        .padding(.top, 30)
+        .onAppear {
+            viewModel.setContext(context)
         }
     }
 }
 
-#Preview {
-    MealMainView()
-}
+//struct MealMainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealMainView()
+//            .modelContainer(for: [MealRecord.self, MealPlan.self], inMemory: true)
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
