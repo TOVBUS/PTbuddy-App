@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct OnboardingMainView: View {
+    @EnvironmentObject var viewModel: OnboardingViewModel
     @State var currentQuestionIndex = 0
-    var memberInfo = OnboardingMemberInfo(basicInfo: BasicInfo(nick: "", gender: "", birth: "", height: "", weight: ""), eatingHabit: EatingHabit(mealCount: "", mealAmout: "", carbohydratePerMealCount: "", proteinPerMealCount: "", vegetablePerMealCount: "", waterIntakePerDay: "", alcoholIntake: ""), activityHabit: ActivityHabit(usualActivity: "", dailyStep: "", pushUpCount: "", isRegularActivity: ""), activityGoal: ActivityGoal(goalWeight: "", activityGoal: "", activityPlace: "", preferenceActivity: "", activityFrequency: ""))
 
     var body: some View {
 
@@ -27,7 +27,7 @@ struct OnboardingMainView: View {
                 }
 
             })
-            .toolbar(content: {
+            .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     if currentQuestionIndex >= 1 {
                         Button(action: {
@@ -37,10 +37,10 @@ struct OnboardingMainView: View {
                         })
                     }
                 }
-            })
+            }
             .navigationTitle("온보딩")
             .navigationBarTitleDisplayMode(.inline)
-        }).environmentObject(memberInfo)
+        })
     }
 }
 

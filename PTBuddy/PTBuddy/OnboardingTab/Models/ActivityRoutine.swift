@@ -37,15 +37,8 @@ struct ActivityWeeklyRoutine: Codable {
     }
 }
 
-//struct ActivityWeeklyRoutineRoot: Codable {
-//    var success: Bool
-//    var responses: [ActivityWeeklyRoutine]
-//    var message: String
-//}
-
 struct ActivityRoutineRoot: Codable {
     var success: Bool
-    var responses: [String]
+    var responses: String
     var message: String
 }
-
