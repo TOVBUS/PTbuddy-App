@@ -136,18 +136,17 @@ struct ActivityMainView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    // 버튼 액션
-                }) {
+                NavigationLink {
+                    ActivityDetailView()
+                } label: {
                     Text("운동 시작하기")
-                        .pretendardFont(.SemiBold, size: 18)
+                        .pretendardFont(.Bold, size: 18)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, maxHeight: 50)
                         .background(Color.orange)
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
-                }
-                .padding(.vertical)
+                }.padding(.vertical)
             }
         }
     }

@@ -12,8 +12,9 @@ struct PTBuddyApp: App {
 //    @StateObject private var onboardingVM = OnboardingViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
 //                .environmentObject(onboardingVM)
+            ActivityMainView()
         }
     }
 }

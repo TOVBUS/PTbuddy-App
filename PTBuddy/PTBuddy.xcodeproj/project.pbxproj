@@ -12,6 +12,7 @@
 		3E1601802C0DAD81009466A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E16017F2C0DAD81009466A3 /* Assets.xcassets */; };
 		3E1601832C0DAD81009466A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E1601822C0DAD81009466A3 /* Preview Assets.xcassets */; };
 		3E760D072C129C5B00DEC9F1 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */; };
+		3EB596DE2C1948D500B0DA64 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB596DD2C1948D500B0DA64 /* ActivityDetailView.swift */; };
 		8F03F58C2C0F4EFF00C8D1C1 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5832C0F4EF700C8D1C1 /* Pretendard-ExtraLight.otf */; };
 		8F03F58D2C0F4EFF00C8D1C1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5842C0F4EF700C8D1C1 /* Pretendard-Regular.otf */; };
 		8F03F58E2C0F4EFF00C8D1C1 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5852C0F4EF800C8D1C1 /* Pretendard-Thin.otf */; };
@@ -65,6 +66,7 @@
 		3E16017F2C0DAD81009466A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E1601822C0DAD81009466A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		3EB596DD2C1948D500B0DA64 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		8F03F5832C0F4EF700C8D1C1 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		8F03F5842C0F4EF700C8D1C1 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		8F03F5852C0F4EF800C8D1C1 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				8F4D425C2C15E6E700A16350 /* ActivityTimeListView.swift */,
 				8F4D425A2C15DD9700A16350 /* ActivityRoutineRow.swift */,
 				3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */,
+				3EB596DD2C1948D500B0DA64 /* ActivityDetailView.swift */,
 			);
 			path = ActivityTab;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
 				C40CEB4D2C12171800C86273 /* MealRecordModel.swift in Sources */,
 				C40CEB512C121CBC00C86273 /* AddMealView.swift in Sources */,
+				3EB596DE2C1948D500B0DA64 /* ActivityDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
