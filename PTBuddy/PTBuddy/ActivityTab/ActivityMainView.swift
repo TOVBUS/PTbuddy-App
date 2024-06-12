@@ -149,6 +149,63 @@ struct ActivityMainView: View {
                 }
                 .padding(.vertical)
             }
+            .onAppear {
+                // 1. 데이터 모델 정의
+                struct Exercise: Codable {
+                    let id: String
+                    let activityTitle: String
+                    let proTip: String
+                    let howTo: String
+                    let primaryMuscleGroups: String
+                    let muscleImageURL: String
+                    let equipment: String
+                }
+
+                // 2. HTTP 요청 함수 정의
+                func fetchExerciseDetails(activityName: String, completion: @escaping (Result<Exercise, Error>) -> Void) {
+                    let baseUrl = "http://localhost:3000/crawler/crawl/"
+                    guard let url = URL(string: baseUrl + activityName) else {
+                        print("Invalid URL")
+                        return
+                    }
+
+                    let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                        if let error = error {
+                            completion(.failure(error))
+                            return
+                        }
+
+                        guard let data = data else {
+                            print("No data received")
+                            return
+                        }
+
+                        do {
+                            let exercise = try JSONDecoder().decode(Exercise.self, from: data)
+                            completion(.success(exercise))
+                        } catch let decodingError {
+                            completion(.failure(decodingError))
+                        }
+                    }
+
+                    task.resume()
+                }
+
+                // 3. 함수 호출 및 결과 처리
+                fetchExerciseDetails(activityName: "straight-arm-bent-knee-crunch") { result in
+                    switch result {
+                    case .success(let exercise):
+                        print("Exercise Title: \(exercise.activityTitle)")
+                        print("Pro Tip: \(exercise.proTip)")
+                        print("How To: \(exercise.howTo)")
+                        print("Primary Muscle Groups: \(exercise.primaryMuscleGroups)")
+                        print("Muscle Image URL: \(exercise.muscleImageURL)")
+                        print("Equipment: \(exercise.equipment)")
+                    case .failure(let error):
+                        print("Error fetching exercise details: \(error)")
+                    }
+                }
+            }
         }
     }
 }
