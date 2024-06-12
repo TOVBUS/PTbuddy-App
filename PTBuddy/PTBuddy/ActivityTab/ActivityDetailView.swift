@@ -10,6 +10,7 @@ import SwiftUI
 struct ActivityDetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    @State private var isPresented = false
     var activitySet: String = "1세트"
     
     var body: some View {
@@ -68,7 +69,9 @@ struct ActivityDetailView: View {
             }
             
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    isPresented.toggle()
+                }, label: {
                     Text("휴식")
                         .foregroundStyle(.white)
                         .pretendardFont(.Bold, size: 18)
@@ -80,6 +83,11 @@ struct ActivityDetailView: View {
                         .foregroundStyle(.orange)
                         
                 )
+                .sheet(isPresented: $isPresented) {
+                    RestTimeModalView()
+                        .presentationDetents([.fraction(0.9)])
+                        .presentationDragIndicator(.visible)
+                }
                 
                 Button(action: {}, label: {
                     Image(systemName: "plus")

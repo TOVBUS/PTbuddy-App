@@ -13,6 +13,10 @@
 		3E1601832C0DAD81009466A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E1601822C0DAD81009466A3 /* Preview Assets.xcassets */; };
 		3E760D072C129C5B00DEC9F1 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */; };
 		3EB596DE2C1948D500B0DA64 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB596DD2C1948D500B0DA64 /* ActivityDetailView.swift */; };
+		3EB596E02C198B5B00B0DA64 /* ActivityTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB596DF2C198B5B00B0DA64 /* ActivityTimerViewModel.swift */; };
+		3EB596E42C19951400B0DA64 /* RestTimeModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB596E32C19951400B0DA64 /* RestTimeModalView.swift */; };
+		3EB596E62C199ABB00B0DA64 /* CircularTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB596E52C199ABB00B0DA64 /* CircularTimerView.swift */; };
+		3EB596EA2C199B1D00B0DA64 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB596E92C199B1D00B0DA64 /* TimeInterval+Extension.swift */; };
 		8F03F58C2C0F4EFF00C8D1C1 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5832C0F4EF700C8D1C1 /* Pretendard-ExtraLight.otf */; };
 		8F03F58D2C0F4EFF00C8D1C1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5842C0F4EF700C8D1C1 /* Pretendard-Regular.otf */; };
 		8F03F58E2C0F4EFF00C8D1C1 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5852C0F4EF800C8D1C1 /* Pretendard-Thin.otf */; };
@@ -67,6 +71,10 @@
 		3E1601822C0DAD81009466A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		3EB596DD2C1948D500B0DA64 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		3EB596DF2C198B5B00B0DA64 /* ActivityTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimerViewModel.swift; sourceTree = "<group>"; };
+		3EB596E32C19951400B0DA64 /* RestTimeModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimeModalView.swift; sourceTree = "<group>"; };
+		3EB596E52C199ABB00B0DA64 /* CircularTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerView.swift; sourceTree = "<group>"; };
+		3EB596E92C199B1D00B0DA64 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		8F03F5832C0F4EF700C8D1C1 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		8F03F5842C0F4EF700C8D1C1 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		8F03F5852C0F4EF800C8D1C1 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				8F03F5972C0F556900C8D1C1 /* View+Extension.swift */,
+				3EB596E92C199B1D00B0DA64 /* TimeInterval+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +275,9 @@
 				8F4D425A2C15DD9700A16350 /* ActivityRoutineRow.swift */,
 				3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */,
 				3EB596DD2C1948D500B0DA64 /* ActivityDetailView.swift */,
+				3EB596DF2C198B5B00B0DA64 /* ActivityTimerViewModel.swift */,
+				3EB596E32C19951400B0DA64 /* RestTimeModalView.swift */,
+				3EB596E52C199ABB00B0DA64 /* CircularTimerView.swift */,
 			);
 			path = ActivityTab;
 			sourceTree = "<group>";
@@ -362,6 +374,7 @@
 				C40CEB4F2C1217EF00C86273 /* MealDetailView.swift in Sources */,
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */,
+				3EB596E62C199ABB00B0DA64 /* CircularTimerView.swift in Sources */,
 				E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */,
 				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
 				C40CEB5A2C12B0C700C86273 /* ProfileMainView.swift in Sources */,
@@ -377,9 +390,12 @@
 				8F4D42592C15DA7800A16350 /* ActivityRoutineListView.swift in Sources */,
 				3E760D072C129C5B00DEC9F1 /* ActivityViewModel.swift in Sources */,
 				C40CEB532C121E7C00C86273 /* MealRecordsView.swift in Sources */,
+				3EB596EA2C199B1D00B0DA64 /* TimeInterval+Extension.swift in Sources */,
+				3EB596E42C19951400B0DA64 /* RestTimeModalView.swift in Sources */,
 				C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */,
 				C40CEB4B2C12157300C86273 /* ImagePicker.swift in Sources */,
 				C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */,
+				3EB596E02C198B5B00B0DA64 /* ActivityTimerViewModel.swift in Sources */,
 				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
 				E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
