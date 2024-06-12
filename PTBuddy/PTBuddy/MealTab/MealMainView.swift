@@ -6,26 +6,54 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MealMainView: View {
+    @Environment(\.modelContext) private var context: ModelContext
+
+    @StateObject private var viewModel = MealPlanViewModel()
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
                 RecommendedDietView()
-                
+                    .environmentObject(viewModel)
+
                 MealRecordsView()
-                
+                    .environmentObject(viewModel)
+
                 Spacer()
-                
-                GetDietButton()
+
+                GetDietButton(action: viewModel.fetchMealPlanFromAPI)
             }
-            .padding(.horizontal) // 가로 패딩 추가
+            .padding(.horizontal)
+        }
+        .background(Color(.systemBackground).edgesIgnoringSafeArea(.all))
+        .padding(.top, 30)
+        .onAppear {
+            viewModel.setContext(context)
         }
     }
 }
 
-#Preview {
-    MealMainView()
-        .modelContainer(for: MealRecord.self, inMemory: true) // Preview용 inMemory 설정
-}
+//struct MealMainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealMainView()
+//            .modelContainer(for: [MealRecord.self, MealPlan.self], inMemory: true)
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
