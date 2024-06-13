@@ -5,8 +5,8 @@
 //  Created by Ji Hye PARK on 6/12/24.
 //
 
-import Foundation
 import SwiftData
+import SwiftUI
 
 class MealRecordViewModel: ObservableObject {
     @Published var mealRecords: [MealRecord] = []
@@ -22,33 +22,21 @@ class MealRecordViewModel: ObservableObject {
         let fetchDescriptor = FetchDescriptor<MealRecord>()
         do {
             mealRecords = try context.fetch(fetchDescriptor)
-            if mealRecords.isEmpty {
-                insertInitialData()
-            }
         } catch {
             print("Failed to fetch meal records: \(error.localizedDescription)")
         }
     }
 
-    func insertInitialData() {
+    func addMealRecord(type: String, notes: String = "", images: [Data] = []) {
         guard let context = context else { return }
-        let initialData = [
-            MealRecord(type: "아침", notes: "기본 아침 메모"),
-            MealRecord(type: "점심", notes: "기본 점심 메모"),
-            MealRecord(type: "저녁", notes: "기본 저녁 메모"),
-            MealRecord(type: "간식", notes: "기본 간식 메모")
-        ]
-
-        for record in initialData {
-            context.insert(record)
-        }
+        let newMealRecord = MealRecord(type: type, notes: notes, images: images)
+        context.insert(newMealRecord)
 
         do {
             try context.save()
-            loadMealRecords()
+            loadMealRecords() // 새로운 기록을 추가한 후 다시 로드하여 업데이트
         } catch {
-            print("Failed to save initial data: \(error.localizedDescription)")
+            print("Failed to save meal record: \(error.localizedDescription)")
         }
     }
 }
-

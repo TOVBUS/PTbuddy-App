@@ -15,18 +15,31 @@ struct MealMainView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
+            VStack() {
                 RecommendedDietView()
                     .environmentObject(viewModel)
 
-                 MealRecordsView()
-                     .environmentObject(viewModel)
-
-                Spacer()
-
-                GetDietButton(action: viewModel.fetchMealPlanFromAPI)
+                MealRecordsView()
+                    .environmentObject(viewModel)
             }
-            .padding(.horizontal)
+
+            Spacer()
+//            MainButtonView(buttonText: "피버에게 식단 추천 받기") {
+//                viewModel.fetchMealPlanFromAPI()
+//            }
+            Button(action: {
+                // 버튼 액션
+            }) {
+                Text("피버에게 식단 추천 받기")
+                    .pretendardFont(.SemiBold, size: 18)
+                    .foregroundColor(.white)
+                    .frame(height: 50)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.orange)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 30)
+            }
+            .padding(.vertical)
         }
         .background(Color(.systemBackground).edgesIgnoringSafeArea(.all))
         .padding(.top, 30)

@@ -84,7 +84,7 @@ struct MealRecordsView: View {
                                 }
                             }
                             .padding(.horizontal, 20)
-                            .padding(.bottom, 10)
+                            .padding(.bottom, 20)
                         }
                     }
                     .background(Color.white)
@@ -94,7 +94,7 @@ struct MealRecordsView: View {
                             .stroke(Color.black, lineWidth: 2)
                     )
                     .padding(.horizontal, 20)
-                    .padding(.bottom, 5)
+                    .padding(.bottom, 20)
                 }
             }
         }
@@ -132,26 +132,13 @@ struct MealRecordsView: View {
         .sheet(isPresented: $showAddMealView) {
             if let mealType = selectedMealType {
                 AddMealView(mealType: mealType) { newMealRecord in
-                    if let existingMeal = viewModel.mealRecords.first(where: { $0.type == mealType }) {
-                        withAnimation {
-                            existingMeal.notes = newMealRecord.notes
-                            if !newMealRecord.images.isEmpty {
-                                existingMeal.images = newMealRecord.images
-                            }
-                            do {
-                                try context.save()
-                            } catch {
-                                print("Failed to save context: \(error.localizedDescription)")
-                            }
-                        }
-                    } else {
-                        withAnimation {
-                            context.insert(newMealRecord)
-                            do {
-                                try context.save()
-                            } catch {
-                                print("Failed to save context: \(error.localizedDescription)")
-                            }
+                    withAnimation {
+                        context.insert(newMealRecord)
+                        do {
+                            try context.save()
+                            viewModel.loadMealRecords() // 새로운 기록을 추가한 후 다시 로드하여 업데이트
+                        } catch {
+                            print("Failed to save context: \(error.localizedDescription)")
                         }
                     }
                     showAddMealView = false
@@ -222,9 +209,6 @@ struct MealRecordsView_Previews: PreviewProvider {
             .modelContainer(for: MealRecord.self, inMemory: true) // Preview용 inMemory 설정
     }
 }
-
-
-
 
 
 

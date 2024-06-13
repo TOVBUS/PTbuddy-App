@@ -33,7 +33,7 @@ struct AddMealView: View {
                         .pretendardFont(.Regular, size: 18)
                         .padding()
                 }
-                .frame(height: 500)
+                .frame(height: 200)
                 .padding()
                 
                 Spacer()
