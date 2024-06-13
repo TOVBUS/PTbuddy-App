@@ -60,6 +60,8 @@
 		E1F6CDC62C17EED800CEE6CE /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC52C17EED800CEE6CE /* OnboardingService.swift */; };
 		E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCC2C18427400CEE6CE /* OnboardingViewModel.swift */; };
 		E1F6CDCF2C18482E00CEE6CE /* ActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCE2C18482E00CEE6CE /* ActivityRoutine.swift */; };
+		E1F6CDF62C1ACA4F00CEE6CE /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */; };
+		E1F6CDF82C1ACA7600CEE6CE /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E1F6CDF72C1ACA7500CEE6CE /* loading.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +119,8 @@
 		E1F6CDC52C17EED800CEE6CE /* OnboardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingService.swift; sourceTree = "<group>"; };
 		E1F6CDCC2C18427400CEE6CE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		E1F6CDCE2C18482E00CEE6CE /* ActivityRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRoutine.swift; sourceTree = "<group>"; };
+		E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		E1F6CDF72C1ACA7500CEE6CE /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 		3E16017A2C0DAD7F009466A3 /* PTBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				E1F6CDF42C1ACA3800CEE6CE /* lottie */,
 				8F03F5952C0F4F5200C8D1C1 /* Info.plist */,
 				3E16017B2C0DAD7F009466A3 /* PTBuddyApp.swift */,
 				3E49AC762C1A79C1004C9137 /* MainTabView.swift */,
@@ -319,6 +324,15 @@
 			path = ActivityTab;
 			sourceTree = "<group>";
 		};
+		E1F6CDF42C1ACA3800CEE6CE /* lottie */ = {
+			isa = PBXGroup;
+			children = (
+				E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */,
+				E1F6CDF72C1ACA7500CEE6CE /* loading.gif */,
+			);
+			path = lottie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F03F5942C0F4EFF00C8D1C1 /* Pretendard-SemiBold.otf in Resources */,
+				E1F6CDF82C1ACA7600CEE6CE /* loading.gif in Resources */,
 				8F03F5902C0F4EFF00C8D1C1 /* Pretendard-Medium.otf in Resources */,
 				8F03F5912C0F4EFF00C8D1C1 /* Pretendard-Bold.otf in Resources */,
 				8F03F5922C0F4EFF00C8D1C1 /* Pretendard-ExtraBold.otf in Resources */,
@@ -443,6 +458,7 @@
 				E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */,
 				E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
+				E1F6CDF62C1ACA4F00CEE6CE /* GifImage.swift in Sources */,
 				C40CEB4D2C12171800C86273 /* MealRecordModel.swift in Sources */,
 				3E49AC792C1A7A86004C9137 /* NavigationStackManager.swift in Sources */,
 				C40CEB512C121CBC00C86273 /* AddMealView.swift in Sources */,
