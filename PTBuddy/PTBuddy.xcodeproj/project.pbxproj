@@ -38,7 +38,6 @@
 		C40CEB812C18266200C86273 /* EditMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB802C18266200C86273 /* EditMealView.swift */; };
 		C40CEB852C18488E00C86273 /* MealPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB842C18488E00C86273 /* MealPlanViewModel.swift */; };
 		C40CEB952C1942CC00C86273 /* MealPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB942C1942CC00C86273 /* MealPlanModel.swift */; };
-		C40CEB982C198DAA00C86273 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C40CEB972C198DAA00C86273 /* Alamofire */; };
 		C40CEB9C2C19BE2900C86273 /* MealRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */; };
 		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
 		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
@@ -57,7 +56,6 @@
 		E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */; };
 		E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC32C14B7FB00CEE6CE /* OnboardingDatePickerView.swift */; };
 		E1F6CDC62C17EED800CEE6CE /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC52C17EED800CEE6CE /* OnboardingService.swift */; };
-		E1F6CDCB2C18229D00CEE6CE /* ResponseActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCA2C18229D00CEE6CE /* ResponseActivityRoutine.swift */; };
 		E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCC2C18427400CEE6CE /* OnboardingViewModel.swift */; };
 		E1F6CDCF2C18482E00CEE6CE /* ActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCE2C18482E00CEE6CE /* ActivityRoutine.swift */; };
 /* End PBXBuildFile section */

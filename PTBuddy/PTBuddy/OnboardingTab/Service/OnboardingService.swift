@@ -22,7 +22,7 @@ class OnboardingService {
     }
 
     func getActivityRoutine(_ onboardingMemberInfo: OnboardingMemberInfo) -> AnyPublisher<ActivityRoutineRoot, AFError> {
-        let url = "http://localhost:3001/ai/activity-routine"
+        let url = "https://ptbuddy-tovbus.azurewebsites.net/ai/activity-routine"
         return session.request(url, method: .post, parameters: onboardingMemberInfo, encoder: JSONParameterEncoder.default)
             .publishDecodable(type: ActivityRoutineRoot.self)
             .value()
