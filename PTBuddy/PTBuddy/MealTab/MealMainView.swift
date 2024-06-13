@@ -35,28 +35,3 @@ struct MealMainView: View {
         }
     }
 }
-
-//struct MealMainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MealMainView()
-//            .modelContainer(for: [MealRecord.self, MealPlan.self], inMemory: true)
-//    }
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
