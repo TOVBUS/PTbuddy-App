@@ -13,11 +13,12 @@ struct OnboardingMainTitleView: View {
     var body: some View {
         HStack {
             Text(mainTitleText)
-                .font(.title)
-                .fontWeight(.bold)
+                .pretendardFont(.Bold, size: 24)
                 .frame(alignment: .leading)
             Spacer()
-        }.padding(.horizontal, 30)
+        }
+        .padding(.horizontal, 30)
+        .padding(.vertical, 10)
     }
 }
 
