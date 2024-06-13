@@ -92,4 +92,17 @@ class OnboardingViewModel: ObservableObject {
 
         return weeklyRoutine
     }
+
+//    func splitByDay(_ response: String) -> [String] {
+//        let dayOfWeek = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+//        var splitByDay = response.components(separatedBy: "|\(dayOfWeek[0])")
+//        var dailyRoutines: [String] = []
+//
+//        for day in dayOfWeek {
+//            if let range = splitByDay[1].range(of: day) {
+//                let dayRoutine = splitByDay[1][..<range.lowerBound]
+//                print(<#T##items: Any...##Any#>)
+//            }
+//        }
+//    }
 }
