@@ -62,6 +62,7 @@
 		E1F6CDCF2C18482E00CEE6CE /* ActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCE2C18482E00CEE6CE /* ActivityRoutine.swift */; };
 		E1F6CDF62C1ACA4F00CEE6CE /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */; };
 		E1F6CDF82C1ACA7600CEE6CE /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E1F6CDF72C1ACA7500CEE6CE /* loading.gif */; };
+		E1F6CDFC2C1AED7400CEE6CE /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDFB2C1AED7400CEE6CE /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		E1F6CDCE2C18482E00CEE6CE /* ActivityRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRoutine.swift; sourceTree = "<group>"; };
 		E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		E1F6CDF72C1ACA7500CEE6CE /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		E1F6CDFB2C1AED7400CEE6CE /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 				8F4D425C2C15E6E700A16350 /* ActivityTimeListView.swift */,
 				8F4D425A2C15DD9700A16350 /* ActivityRoutineRow.swift */,
 				3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */,
+				E1F6CDFB2C1AED7400CEE6CE /* VideoView.swift */,
 			);
 			path = ActivityTab;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				8F4D425D2C15E6E700A16350 /* ActivityTimeListView.swift in Sources */,
 				C40CEB812C18266200C86273 /* EditMealView.swift in Sources */,
 				8F4D425B2C15DD9700A16350 /* ActivityRoutineRow.swift in Sources */,
+				E1F6CDFC2C1AED7400CEE6CE /* VideoView.swift in Sources */,
 				8F4D42592C15DA7800A16350 /* ActivityRoutineListView.swift in Sources */,
 				3E760D072C129C5B00DEC9F1 /* ActivityViewModel.swift in Sources */,
 				C40CEB532C121E7C00C86273 /* MealRecordsView.swift in Sources */,
