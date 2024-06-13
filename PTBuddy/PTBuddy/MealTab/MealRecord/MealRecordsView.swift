@@ -56,11 +56,11 @@ struct MealRecordsView: View {
                                 if !mealRecord.images.isEmpty, let imageData = mealRecord.images.first, let image = UIImage(data: imageData) {
                                     Image(uiImage: image)
                                         .resizable()
-                                        .aspectRatio(contentMode: .fit)
+                                        .aspectRatio(contentMode: .fill)
                                         .frame(width: 100, height: 80)
+                                        .cornerRadius(20)
                                         .padding(.bottom, 10)
                                         .background(Color.white)
-                                        .cornerRadius(20)
                                 }
 
                                 if !mealRecord.notes.isEmpty {
@@ -74,13 +74,6 @@ struct MealRecordsView: View {
                                             editMealRecord = mealRecord
                                             showEditMealView = true
                                         }
-                                } else {
-                                    Text("")
-                                        .padding()
-                                        .frame(width: 100, height: 80)
-                                        .background(Color.orange.opacity(0.3))
-                                        .cornerRadius(20)
-                                        .padding(.horizontal, 10)
                                 }
                             }
                             .padding(.horizontal, 20)
@@ -88,13 +81,13 @@ struct MealRecordsView: View {
                         }
                     }
                     .background(Color.white)
-                    .cornerRadius(20)
+                    .cornerRadius(15)
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.black, lineWidth: 2)
                     )
                     .padding(.horizontal, 20)
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 15)
                 }
             }
         }
@@ -107,11 +100,7 @@ struct MealRecordsView: View {
                     showImagePicker = true
                 },
                 .default(Text("메모하기")) {
-                    if let mealType = selectedMealType, let _ = viewModel.mealRecords.first(where: { $0.type == mealType }) {
-                        showAlert = true
-                    } else {
-                        showAddMealView = true
-                    }
+                    showAddMealView = true
                 },
                 .destructive(Text("취소"))
             ])
@@ -132,13 +121,26 @@ struct MealRecordsView: View {
         .sheet(isPresented: $showAddMealView) {
             if let mealType = selectedMealType {
                 AddMealView(mealType: mealType) { newMealRecord in
-                    withAnimation {
-                        context.insert(newMealRecord)
-                        do {
-                            try context.save()
-                            viewModel.loadMealRecords() // 새로운 기록을 추가한 후 다시 로드하여 업데이트
-                        } catch {
-                            print("Failed to save context: \(error.localizedDescription)")
+                    if let existingMeal = viewModel.mealRecords.first(where: { $0.type == mealType }) {
+                        withAnimation {
+                            existingMeal.notes = newMealRecord.notes
+                            if !newMealRecord.images.isEmpty {
+                                existingMeal.images = newMealRecord.images
+                            }
+                            do {
+                                try context.save()
+                            } catch {
+                                print("Failed to save context: \(error.localizedDescription)")
+                            }
+                        }
+                    } else {
+                        withAnimation {
+                            context.insert(newMealRecord)
+                            do {
+                                try context.save()
+                            } catch {
+                                print("Failed to save context: \(error.localizedDescription)")
+                            }
                         }
                     }
                     showAddMealView = false
@@ -167,14 +169,27 @@ struct MealRecordsView: View {
             ImagePicker(image: $selectedImage, sourceType: .photoLibrary)
                 .onDisappear {
                     if let selectedImage = selectedImage,
-                       let mealType = selectedMealType,
-                       let mealRecord = viewModel.mealRecords.first(where: { $0.type == mealType }) {
-                        withAnimation {
-                            mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
-                            do {
-                                try context.save()
-                            } catch {
-                                print("Failed to save context: \(error.localizedDescription)")
+                       let mealType = selectedMealType {
+                        if let mealRecord = viewModel.mealRecords.first(where: { $0.type == mealType }) {
+                            withAnimation {
+                                mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
+                                do {
+                                    try context.save()
+                                } catch {
+                                    print("Failed to save context: \(error.localizedDescription)")
+                                }
+                                viewModel.loadMealRecords()
+                            }
+                        } else {
+                            let newMealRecord = MealRecord(type: mealType, images: [selectedImage.jpegData(compressionQuality: 1.0)!])
+                            withAnimation {
+                                context.insert(newMealRecord)
+                                do {
+                                    try context.save()
+                                } catch {
+                                    print("Failed to save context: \(error.localizedDescription)")
+                                }
+                                viewModel.loadMealRecords()
                             }
                         }
                     }
@@ -184,14 +199,27 @@ struct MealRecordsView: View {
             ImagePicker(image: $selectedImage, sourceType: .camera)
                 .onDisappear {
                     if let selectedImage = selectedImage,
-                       let mealType = selectedMealType,
-                       let mealRecord = viewModel.mealRecords.first(where: { $0.type == mealType }) {
-                        withAnimation {
-                            mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
-                            do {
-                                try context.save()
-                            } catch {
-                                print("Failed to save context: \(error.localizedDescription)")
+                       let mealType = selectedMealType {
+                        if let mealRecord = viewModel.mealRecords.first(where: { $0.type == mealType }) {
+                            withAnimation {
+                                mealRecord.images = [selectedImage.jpegData(compressionQuality: 1.0)!]
+                                do {
+                                    try context.save()
+                                } catch {
+                                    print("Failed to save context: \(error.localizedDescription)")
+                                }
+                                viewModel.loadMealRecords()
+                            }
+                        } else {
+                            let newMealRecord = MealRecord(type: mealType, images: [selectedImage.jpegData(compressionQuality: 1.0)!])
+                            withAnimation {
+                                context.insert(newMealRecord)
+                                do {
+                                    try context.save()
+                                } catch {
+                                    print("Failed to save context: \(error.localizedDescription)")
+                                }
+                                viewModel.loadMealRecords()
                             }
                         }
                     }
@@ -209,8 +237,3 @@ struct MealRecordsView_Previews: PreviewProvider {
             .modelContainer(for: MealRecord.self, inMemory: true) // Preview용 inMemory 설정
     }
 }
-
-
-
-
-

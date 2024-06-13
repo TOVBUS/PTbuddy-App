@@ -9,20 +9,20 @@ import SwiftUI
 import SwiftData
 
 struct AddMealView: View {
-    
+
     @Environment(\.modelContext) var context
     @Environment(\.presentationMode) var presentationMode
     @State var mealType: String
     @State var mealRecord = MealRecord(type: "")
-    
+
     var onSave: (MealRecord) -> Void
-    
+
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 Text("기록하고 싶은 내용을 자유롭게 써주세요!")
                     .pretendardFont(.Regular, size: 18)
-                
+
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.orange.opacity(0.5))
@@ -33,11 +33,11 @@ struct AddMealView: View {
                         .pretendardFont(.Regular, size: 18)
                         .padding()
                 }
-                .frame(height: 200)
+                .frame(height: 200)  // 메모 입력 칸 크기 조정
                 .padding()
-                
+
                 Spacer()
-                
+
                 Button(action: {
                     mealRecord.type = mealType
                     withAnimation {
@@ -75,6 +75,5 @@ struct AddMealView: View {
         }
     }
 }
-
 
 

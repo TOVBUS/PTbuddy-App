@@ -29,6 +29,7 @@ struct MealMainView: View {
 //            }
             Button(action: {
                 // 버튼 액션
+                viewModel.fetchMealPlanFromAPI()
             }) {
                 Text("피버에게 식단 추천 받기")
                     .pretendardFont(.SemiBold, size: 18)
@@ -42,7 +43,7 @@ struct MealMainView: View {
             .padding(.vertical)
         }
         .background(Color(.systemBackground).edgesIgnoringSafeArea(.all))
-        .padding(.top, 30)
+        .padding(.top, 20)
         .onAppear {
             viewModel.setContext(context)
         }
