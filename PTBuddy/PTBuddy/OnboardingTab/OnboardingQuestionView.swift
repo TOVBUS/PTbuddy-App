@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingQuestionView: View {
-    @EnvironmentObject var memberInfo: OnboardingMemberInfo
+    @EnvironmentObject var viewModel: OnboardingViewModel
     @State var selectedAnswer: [String] = Array(repeating: "", count: 30)
 
     var question: OnboardingQuestion
@@ -22,7 +22,7 @@ struct OnboardingQuestionView: View {
                 }
 
                 QuestionContentView(question: question, selectedAnswer: $selectedAnswer)
-                    .environmentObject(memberInfo)
+                    .environmentObject(viewModel.memberInfo)
                 Spacer()
             }
         }

@@ -11,6 +11,8 @@
 		3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E16017D2C0DAD7F009466A3 /* ContentView.swift */; };
 		3E1601802C0DAD81009466A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E16017F2C0DAD81009466A3 /* Assets.xcassets */; };
 		3E1601832C0DAD81009466A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E1601822C0DAD81009466A3 /* Preview Assets.xcassets */; };
+		3E49AC772C1A79C1004C9137 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49AC762C1A79C1004C9137 /* MainTabView.swift */; };
+		3E49AC792C1A7A86004C9137 /* NavigationStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49AC782C1A7A86004C9137 /* NavigationStackManager.swift */; };
 		3E760D072C129C5B00DEC9F1 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */; };
 		3EB596ED2C19BA9500B0DA64 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3EB596EC2C19BA9500B0DA64 /* Alamofire */; };
 		8F03F58C2C0F4EFF00C8D1C1 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F03F5832C0F4EF700C8D1C1 /* Pretendard-ExtraLight.otf */; };
@@ -38,7 +40,6 @@
 		C40CEB812C18266200C86273 /* EditMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB802C18266200C86273 /* EditMealView.swift */; };
 		C40CEB852C18488E00C86273 /* MealPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB842C18488E00C86273 /* MealPlanViewModel.swift */; };
 		C40CEB952C1942CC00C86273 /* MealPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB942C1942CC00C86273 /* MealPlanModel.swift */; };
-		C40CEB982C198DAA00C86273 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C40CEB972C198DAA00C86273 /* Alamofire */; };
 		C40CEB9C2C19BE2900C86273 /* MealRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CEB9B2C19BE2900C86273 /* MealRecordViewModel.swift */; };
 		C42EB1E62C0FFFC70031C3FF /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E52C0FFFC70031C3FF /* ActivityMainView.swift */; };
 		C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EB1E72C0FFFD30031C3FF /* OnboardingMainView.swift */; };
@@ -57,7 +58,6 @@
 		E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC12C11DA7000CEE6CE /* OnboardingTextFieldView.swift */; };
 		E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC32C14B7FB00CEE6CE /* OnboardingDatePickerView.swift */; };
 		E1F6CDC62C17EED800CEE6CE /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDC52C17EED800CEE6CE /* OnboardingService.swift */; };
-		E1F6CDCB2C18229D00CEE6CE /* ResponseActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCA2C18229D00CEE6CE /* ResponseActivityRoutine.swift */; };
 		E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCC2C18427400CEE6CE /* OnboardingViewModel.swift */; };
 		E1F6CDCF2C18482E00CEE6CE /* ActivityRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDCE2C18482E00CEE6CE /* ActivityRoutine.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +68,8 @@
 		3E16017D2C0DAD7F009466A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E16017F2C0DAD81009466A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E1601822C0DAD81009466A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E49AC762C1A79C1004C9137 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		3E49AC782C1A7A86004C9137 /* NavigationStackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackManager.swift; sourceTree = "<group>"; };
 		3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		8F03F5832C0F4EF700C8D1C1 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		8F03F5842C0F4EF700C8D1C1 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -150,6 +152,8 @@
 			children = (
 				8F03F5952C0F4F5200C8D1C1 /* Info.plist */,
 				3E16017B2C0DAD7F009466A3 /* PTBuddyApp.swift */,
+				3E49AC762C1A79C1004C9137 /* MainTabView.swift */,
+				3E49AC782C1A7A86004C9137 /* NavigationStackManager.swift */,
 				C40CEB582C12B08F00C86273 /* ProfileTab */,
 				C42EB1E42C0FFFB40031C3FF /* ActivityTab */,
 				C42EB1E32C0FFFA90031C3FF /* OnboardingTab */,
@@ -416,6 +420,7 @@
 				C42EB1EA2C0FFFE10031C3FF /* MealMainView.swift in Sources */,
 				E1F6CDB42C10535E00CEE6CE /* OnboardingMainTitleView.swift in Sources */,
 				8F4D425F2C15F3ED00A16350 /* ActivityConditionListView.swift in Sources */,
+				3E49AC772C1A79C1004C9137 /* MainTabView.swift in Sources */,
 				8F4D425D2C15E6E700A16350 /* ActivityTimeListView.swift in Sources */,
 				C40CEB812C18266200C86273 /* EditMealView.swift in Sources */,
 				8F4D425B2C15DD9700A16350 /* ActivityRoutineRow.swift in Sources */,
@@ -439,6 +444,7 @@
 				E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
 				C40CEB4D2C12171800C86273 /* MealRecordModel.swift in Sources */,
+				3E49AC792C1A7A86004C9137 /* NavigationStackManager.swift in Sources */,
 				C40CEB512C121CBC00C86273 /* AddMealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
