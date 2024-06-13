@@ -41,6 +41,7 @@ struct MealMainView: View {
                     .padding(.horizontal, 30)
             }
             .padding(.vertical)
+            .padding(.bottom, 20)
         }
         .background(Color(.systemBackground).edgesIgnoringSafeArea(.all))
         .padding(.top, 20)
