@@ -10,7 +10,8 @@ import SwiftUI
 struct OnboardingMainView: View {
     @EnvironmentObject var navigationStackManager: NavigationStackManager
     @State var currentQuestionIndex = 0
-    
+    @State var showLoadingView = true
+
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -25,15 +26,38 @@ struct OnboardingMainView: View {
                             }
                         }
                     } else {
-                        MainButtonView(buttonText: "메인으로 이동하기!") {
-                            navigationStackManager.isOnboardingCompleted = true
+                        Group {
+                            if showLoadingView {
+                                LoadingView()
+                                    .transition(.opacity)
+                            } else {
+                                VStack {
+                                    Spacer()
+                                    Image("AppIcon")
+                                    Spacer()
+                                    MainButtonView(buttonText: "메인으로 이동하기!") {
+                                        navigationStackManager.isOnboardingCompleted = true
+                                    }
+                                }
+                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                                .background(Color.white)
+                                .transition(.opacity)
+                                //OnboardingCompleteView()
+                            }
                         }
+                        .onAppear(perform: {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                withAnimation {
+                                    showLoadingView = false
+                                }
+                            }
+                        })
                     }
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    if currentQuestionIndex >= 1 {
+                    if currentQuestionIndex >= 1 && currentQuestionIndex < 25{
                         Button(action: {
                             currentQuestionIndex -= 1
                         }) {

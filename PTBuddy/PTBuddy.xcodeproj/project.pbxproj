@@ -63,6 +63,8 @@
 		E1F6CDF62C1ACA4F00CEE6CE /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */; };
 		E1F6CDF82C1ACA7600CEE6CE /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E1F6CDF72C1ACA7500CEE6CE /* loading.gif */; };
 		E1F6CDFC2C1AED7400CEE6CE /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDFB2C1AED7400CEE6CE /* VideoView.swift */; };
+		E1F6CDFE2C1B0A0B00CEE6CE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDFD2C1B0A0B00CEE6CE /* LoadingView.swift */; };
+		E1F6CE002C1B149800CEE6CE /* OnboardingCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CDFF2C1B149800CEE6CE /* OnboardingCompleteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +125,8 @@
 		E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		E1F6CDF72C1ACA7500CEE6CE /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		E1F6CDFB2C1AED7400CEE6CE /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		E1F6CDFD2C1B0A0B00CEE6CE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E1F6CDFF2C1B149800CEE6CE /* OnboardingCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCompleteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +313,7 @@
 				3EC619022C19E0D000FC564F /* ViewModels */,
 				3EC618FF2C19D6EC00FC564F /* Service */,
 				3EC618FE2C19D6C900FC564F /* Models */,
+				E1F6CDFF2C1B149800CEE6CE /* OnboardingCompleteView.swift */,
 			);
 			path = OnboardingTab;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 			children = (
 				E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */,
 				E1F6CDF72C1ACA7500CEE6CE /* loading.gif */,
+				E1F6CDFD2C1B0A0B00CEE6CE /* LoadingView.swift */,
 			);
 			path = lottie;
 			sourceTree = "<group>";
@@ -426,10 +432,12 @@
 				E1F6CDC02C11983300CEE6CE /* OnboardingQuestionView.swift in Sources */,
 				E1F6CDB62C10542800CEE6CE /* OnboardingSubTitleView.swift in Sources */,
 				C40CEB552C121FF300C86273 /* GetDietButton.swift in Sources */,
+				E1F6CE002C1B149800CEE6CE /* OnboardingCompleteView.swift in Sources */,
 				C40CEB572C1220B100C86273 /* RecommendedDietView.swift in Sources */,
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
 				E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */,
 				E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */,
+				E1F6CDFE2C1B0A0B00CEE6CE /* LoadingView.swift in Sources */,
 				8F03F5982C0F556900C8D1C1 /* View+Extension.swift in Sources */,
 				C40CEB5A2C12B0C700C86273 /* ProfileMainView.swift in Sources */,
 				C40CEB7A2C12E52700C86273 /* WebView.swift in Sources */,
