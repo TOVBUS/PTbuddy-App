@@ -39,10 +39,12 @@ struct OnboardingMainView: View {
                         }) {
                             Image(systemName: "chevron.left")
                         }
+                    } else {
+                        Text("")
                     }
                 }
             }
-            .navigationTitle("온보딩")
+            .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

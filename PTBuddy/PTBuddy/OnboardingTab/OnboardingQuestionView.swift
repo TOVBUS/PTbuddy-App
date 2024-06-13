@@ -43,6 +43,8 @@ struct QuestionContentView: View {
             }
         } else {
             switch question.id {
+            case 0:
+                Text("")
             case 1:
                     OnboardingTextFieldView(placeholder: "이름", text: $viewModel.memberInfo.basicInfo.nick, keyboardType: .default)
             case 3:
@@ -61,7 +63,7 @@ struct QuestionContentView: View {
             case 21:
                     OnboardingTextFieldView(placeholder: "55kg", text: $viewModel.memberInfo.activityGoal.goalWeight, keyboardType: .numberPad)
             default:
-                Text("기본")
+                Text("")
             }
         }
     }

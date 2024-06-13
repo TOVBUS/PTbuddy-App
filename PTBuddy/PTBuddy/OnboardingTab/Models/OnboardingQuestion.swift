@@ -15,6 +15,7 @@ struct OnboardingQuestion: Identifiable {
 }
 
 let onboardingQuestions = [
+    OnboardingQuestion(id: 0, mainTitle: "안녕하세요!\n저는 피티버디의 피버입니다🔥🔥 \n회원님에게 최적화된 \nAI운동 루틴과 식단 추천을 위해\n몇 가지 질문을 드려도 될까요?", subTitle: "(1분~2분 소요시간이 걸립니다.)"),
     OnboardingQuestion(id: 1, mainTitle: "이름을 알려주세요"),
     OnboardingQuestion(id: 2, mainTitle: "성별을 알려주세요", subTitle: "기초대사량 추정에 생물학적 성별에 따른 차이가 발생해요", answers: ["여성", "남성", "기타 - 생물학적 여성에 가까움", "기타 - 생물학적 남성에 가까움"]),
     OnboardingQuestion(id: 3, mainTitle: "생년월일을 입력해주세요"),
