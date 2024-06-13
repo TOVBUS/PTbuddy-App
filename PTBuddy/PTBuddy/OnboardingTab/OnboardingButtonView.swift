@@ -19,11 +19,11 @@ struct OnboardingButtonView: View {
         }) {
             HStack {
                 Text(buttonText)
-                    .font(.title)
+                    .pretendardFont(.Regular, size: 16)
                     .foregroundColor(.black)
                 Spacer()
                 if isSelected {
-                    Image(systemName: "checkmark")
+                    Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.green)
                 }
             }
@@ -32,7 +32,7 @@ struct OnboardingButtonView: View {
             .background(Color.white)
             .cornerRadius(20)
             .overlay(
-                RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 2.0)
+                RoundedRectangle(cornerRadius: 12).stroke(Color.black, lineWidth: 1.0)
             )
         }
         .contentShape(RoundedRectangle(cornerRadius: 20))
@@ -41,7 +41,6 @@ struct OnboardingButtonView: View {
     }
 }
 
-//#Preview {
-//    OnboardingButtonView(buttonText: "헬스")
-//}
-
+#Preview {
+    OnboardingButtonView(buttonText: "헬스", isSelected: .constant(.random()), action: {})
+}

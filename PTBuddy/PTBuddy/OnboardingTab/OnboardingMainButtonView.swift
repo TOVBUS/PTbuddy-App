@@ -14,16 +14,14 @@ struct MainButtonView: View {
     var body: some View {
         Button(action: action) {
             Text(buttonText)
-                .font(.title)
+                .pretendardFont(.SemiBold, size: 18)
                 .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(20)
+                .frame(maxWidth: .infinity, maxHeight: 50)
+                .background(Color.orange)
+                .cornerRadius(10)
         }
-        .contentShape(RoundedRectangle(cornerRadius: 20))
         .padding(.horizontal, 30)
-        .buttonStyle(PlainButtonStyle())
+        .padding(.bottom, 20)
     }
 }
 

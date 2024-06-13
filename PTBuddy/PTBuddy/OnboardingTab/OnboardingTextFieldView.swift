@@ -24,9 +24,13 @@ struct OnboardingTextFieldView: View {
             TextField(placeholder, text: $text)
                 .keyboardType(keyboardType)
                 .padding()
-                .background(Color.gray.opacity(0.2))
+                .background(Color.white)
                 .cornerRadius(20)
-                .padding(.horizontal, 20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.black, lineWidth: 1.0)
+                )
+                .padding(.horizontal, 30)
                 .focused($isTextFieldFocused)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -40,6 +44,7 @@ struct OnboardingTextFieldView: View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
+
 
 enum KeyboardType {
     case defaultType
@@ -95,4 +100,8 @@ extension UIApplication {
     func hideKeyboard() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+}
+
+#Preview {
+    OnboardingTextFieldView(placeholder: "임시", text: .constant("Binding String"), keyboardType: .default)
 }

@@ -13,11 +13,13 @@ struct OnboardingSubTitleView: View {
     var body: some View {
         HStack {
             Text(subTitleText)
-                .font(.caption)
-                .fontWeight(.light)
+                .pretendardFont(.Light, size: 12)
                 .frame(alignment: .leading)
             Spacer()
-        }.padding(.horizontal, 30)
+        }
+        .padding(.horizontal, 30)
+        .padding(.bottom, 20)
+        
     }
 }
 

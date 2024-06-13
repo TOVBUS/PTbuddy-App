@@ -19,19 +19,23 @@ struct OnboardingDatePickerView: View {
 
     var body: some View {
         VStack {
-            DatePicker("생년월일", selection: $selectedDate, in: startDate...endDate,  displayedComponents: .date)
+            DatePicker("생년월일", selection: $selectedDate, in: startDate...endDate, displayedComponents: .date)
                 .datePickerStyle(.wheel)
                 .labelsHidden()
                 .environment(\.locale, Locale(identifier: "ko_KR"))
                 .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 80)
-                        .stroke(Color.orange, lineWidth: 2.0)
+                .background(Color.white)
+                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.black, lineWidth: 1.0)
                 )
+                .padding(.horizontal, 30)
+                .padding(.bottom, 20)
         }
     }
 }
 
-//#Preview {
-//    OnboardingDatePickerView(selectedDateString: <#Binding<String>#>)
-//}
+#Preview {
+    OnboardingDatePickerView(selectedDate: .constant(Date()))
+}
