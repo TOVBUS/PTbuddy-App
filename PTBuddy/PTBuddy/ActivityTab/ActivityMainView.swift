@@ -116,20 +116,16 @@ struct ActivityMainView: View {
                         Spacer()
                     }
                     .padding(.horizontal, 30)
+                    .padding(.bottom, 12)
                     
                     List(activityVM.routines, id: \.id) { routine in
-//                        HStack {
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .frame(width: 50, height: 50)
-//                                .foregroundStyle(Color.gray)
-//                            Text(activity.activityTitle)
-//                                .pretendardFont(.Medium, size: 18)
-//                        }
                         RoutineRowView(routine: routine)
+                            .listRowSeparator(.hidden)
+                            .scrollIndicators(.hidden)
                     }
                     .listStyle(PlainListStyle())
+                    .scrollIndicators(.hidden)
                 }
-                .padding(.horizontal, 30)
                 
                 Spacer()
                 
