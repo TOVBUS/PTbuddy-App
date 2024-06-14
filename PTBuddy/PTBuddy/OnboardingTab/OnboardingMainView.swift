@@ -9,9 +9,10 @@ import SwiftUI
 
 struct OnboardingMainView: View {
     @EnvironmentObject var navigationStackManager: NavigationStackManager
+    @EnvironmentObject var onboardingVM: OnboardingViewModel
     @State var currentQuestionIndex = 0
     @State var showLoadingView = true
-
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -33,7 +34,7 @@ struct OnboardingMainView: View {
                             } else {
                                 VStack {
                                     Spacer()
-                                    Image("AppIcon")
+                                    Image("Logo")
                                     Spacer()
                                     MainButtonView(buttonText: "메인으로 이동하기!") {
                                         navigationStackManager.isOnboardingCompleted = true
@@ -42,13 +43,15 @@ struct OnboardingMainView: View {
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                                 .background(Color.white)
                                 .transition(.opacity)
-                                //OnboardingCompleteView()
                             }
                         }
                         .onAppear(perform: {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            onboardingVM.fetchActivityRoutine { }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
                                 withAnimation {
+                                    print("showLoadingView : \(showLoadingView)")
                                     showLoadingView = false
+                                    print("showLoadingView : \(showLoadingView)")
                                 }
                             }
                         })

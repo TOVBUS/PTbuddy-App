@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ActivityMainView: View {
     @StateObject private var activityVM = ActivityViewModel()
+    @EnvironmentObject private var onboardingVM: OnboardingViewModel
     @State private var showActivityTimeList = false
     @State private var showActivityConditionList = false
     @EnvironmentObject var navPathFinder: NavigationPathFinder
@@ -87,6 +88,8 @@ struct ActivityMainView: View {
                         
                         Button(action: {
                             showActivityConditionList.toggle()
+                            print("=======================================")
+                            print(onboardingVM.activityWeeklyRoutine)
                         }) {
                             HStack {
                                 Text("컨디션")
@@ -119,7 +122,7 @@ struct ActivityMainView: View {
                     .padding(.horizontal, 30)
                     .padding(.bottom, 10)
                     
-                    List(activityVM.routines, id: \.id) { routine in
+                    List(onboardingVM.activityWeeklyRoutine, id: \.id) { routine in
                         RoutineRowView(routine: routine)
                             .frame(alignment: .leading)
                             .listRowSeparator(.hidden)

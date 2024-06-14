@@ -8,15 +8,15 @@
 import Foundation
 
 struct Activity: Decodable, Identifiable, Hashable {
-    let id: String
-    let activityTitle: String
-    let proTip: String?
-    let howTo: String?
-    let primaryMusc: String?
-    let muscleImage: String?
-    let equipment: String?
-    let videoURL: String?
-    
+    var id: String
+    var activityTitle: String
+    var proTip: String?
+    var howTo: String?
+    var primaryMusc: String?
+    var muscleImage: String?
+    var equipment: String?
+    var videoURL: String?
+
     static func == (lhs: Activity, rhs: Activity) -> Bool {
         return lhs.id == rhs.id
     }
@@ -27,15 +27,15 @@ struct Activity: Decodable, Identifiable, Hashable {
 }
 
 struct WeeklyRoutine: Decodable, Identifiable {
-    let id: String
-    let day: String
-    let exerciseArea: String
-    let exerciseNameEN: String
-    let exerciseNameKR: String
-    let reps: String?
-    let sets: String?
-    let weight: String?
-    let duration: String?
+    var id = UUID()
+    var day: String
+    var exerciseArea: String
+    var exerciseNameEN: String
+    var exerciseNameKR: String
+    var reps: String?
+    var sets: String?
+    var weight: String?
+    var duration: String?
 }
 
 struct RoutineResponse: Decodable {

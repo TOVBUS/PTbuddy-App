@@ -21,10 +21,10 @@ class OnboardingService {
         self.session = Session(configuration: configuration)
     }
 
-    func getActivityRoutine(_ onboardingMemberInfo: OnboardingMemberInfo) -> AnyPublisher<ActivityRoutineRoot, AFError> {
-        let url = "https://localhost:3000/routine/generate"
+    func getActivityRoutine(_ onboardingMemberInfo: OnboardingMemberInfo) -> AnyPublisher<RoutineResponse, AFError> {
+        let url = "http://localhost:3000/routine/generate"
         return session.request(url, method: .post, parameters: onboardingMemberInfo, encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: ActivityRoutineRoot.self)
+            .publishDecodable(type: RoutineResponse.self)
             .value()
             .eraseToAnyPublisher()
     }

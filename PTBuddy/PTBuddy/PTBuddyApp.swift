@@ -12,7 +12,7 @@ import SwiftData
 struct PTBuddyApp: App {
     @StateObject var navigationStackManager = NavigationStackManager()
     @StateObject var navigationPathFinder = NavigationPathFinder.shared
-    @StateObject private var onboardingVM = OnboardingViewModel()
+    var onboardingVM = OnboardingViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -20,6 +20,7 @@ struct PTBuddyApp: App {
                 MainTabView()
                     .environmentObject(navigationStackManager)
                     .environmentObject(navigationPathFinder)
+                    .environmentObject(onboardingVM)
                     .modelContainer(for: [MealRecord.self, MealPlan.self])
             } else {
                 OnboardingMainView()

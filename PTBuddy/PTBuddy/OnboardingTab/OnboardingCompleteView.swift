@@ -13,7 +13,7 @@ struct OnboardingCompleteView: View {
     var body: some View {
         VStack {
             Spacer()
-            Image("AppIcon")
+            Image("Logo")
             Spacer()
             MainButtonView(buttonText: "메인으로 이동하기!") {
                 navigationStackManager.isOnboardingCompleted = true

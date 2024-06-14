@@ -81,5 +81,5 @@ struct RoutineRowView: View {
 }
 
 #Preview {
-    RoutineRowView(routine: WeeklyRoutine(id: UUID().uuidString, day: "월요일", exerciseArea: "전신 유산소", exerciseNameEN: "Treadmill Running", exerciseNameKR: "트레드밀 달리기", reps: nil, sets: nil, weight: nil, duration: "3600"))
+    RoutineRowView(routine: WeeklyRoutine(day: "월요일", exerciseArea: "전신 유산소", exerciseNameEN: "Treadmill Running", exerciseNameKR: "트레드밀 달리기", reps: nil, sets: nil, weight: nil, duration: "3600"))
 }

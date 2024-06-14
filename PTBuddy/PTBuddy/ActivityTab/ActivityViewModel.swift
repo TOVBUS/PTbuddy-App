@@ -20,11 +20,11 @@ class ActivityViewModel: ObservableObject {
     ]
     
     @Published var routines: [WeeklyRoutine] = [
-        WeeklyRoutine(id: UUID().uuidString, day: "월요일", exerciseArea: "전신 유산소", exerciseNameEN: "Treadmill Running", exerciseNameKR: "트레드밀 달리기", reps: nil, sets: nil, weight: nil, duration: "3600"),
-        WeeklyRoutine(id: UUID().uuidString, day: "화요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Squats", exerciseNameKR: "스쿼트", reps: "15회", sets: "3세트", weight: "10kg", duration: nil),
-        WeeklyRoutine(id: UUID().uuidString, day: "수요일", exerciseArea: "상체 근력 훈련 (가슴, 어깨, 삼두)", exerciseNameEN: "Push-ups", exerciseNameKR: "푸쉬업", reps: "20회", sets: "3세트", weight: nil, duration: nil),
-        WeeklyRoutine(id: UUID().uuidString, day: "목요일", exerciseArea: "전신 유산소", exerciseNameEN: "Running", exerciseNameKR: "달리기", reps: nil, sets: nil, weight: nil, duration: "3600"),
-        WeeklyRoutine(id: UUID().uuidString, day: "금요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Deadlifts", exerciseNameKR: "데드리프트", reps: "12회", sets: "3세트", weight: "10kg", duration: nil)
+        WeeklyRoutine(day: "월요일", exerciseArea: "전신 유산소", exerciseNameEN: "Treadmill Running", exerciseNameKR: "트레드밀 달리기", reps: nil, sets: nil, weight: nil, duration: "3600"),
+        WeeklyRoutine(day: "화요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Squats", exerciseNameKR: "스쿼트", reps: "15회", sets: "3세트", weight: "10kg", duration: nil),
+        WeeklyRoutine(day: "수요일", exerciseArea: "상체 근력 훈련 (가슴, 어깨, 삼두)", exerciseNameEN: "Push-ups", exerciseNameKR: "푸쉬업", reps: "20회", sets: "3세트", weight: nil, duration: nil),
+        WeeklyRoutine(day: "목요일", exerciseArea: "전신 유산소", exerciseNameEN: "Running", exerciseNameKR: "달리기", reps: nil, sets: nil, weight: nil, duration: "3600"),
+        WeeklyRoutine(day: "금요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Deadlifts", exerciseNameKR: "데드리프트", reps: "12회", sets: "3세트", weight: "10kg", duration: nil)
     ]
     @Published var weeklyGoal: Int = 7
     @Published var completedWorkouts: Int = 3
@@ -90,7 +90,7 @@ class ActivityViewModel: ObservableObject {
             }
             
             let routine = WeeklyRoutine(
-                id: "String", // TODO: API에서 넘겨주는 id 받기
+                //id: "String", // TODO: API에서 넘겨주는 id 받기
                 day: day,
                 exerciseArea: exerciseArea,
                 exerciseNameEN: exerciseNameEN,

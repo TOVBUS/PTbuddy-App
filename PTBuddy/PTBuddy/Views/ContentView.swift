@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button("api호출") {
-                onboardingVM.fetchActivityRoutine()
+                onboardingVM.fetchActivityRoutine { }
                 print("onboardingVM.activityWeeklyRoutine: \(onboardingVM.activityWeeklyRoutine)")
                 
                 print("onboardingVM.rawResponse: \(onboardingVM.rawResponse)")
@@ -39,31 +39,42 @@ struct ContentView: View {
             Text("Activity Routine:")
                 .font(.headline)
             ScrollView {
-                ForEach(onboardingVM.activityWeeklyRoutine, id: \.day) { routine in
-                    VStack(alignment: .leading) {
-                        Text("routine.day: \(routine.day)")
-                        Text("routine.activityType: \(routine.activityType)")
-                        ForEach(routine.activityRoutine, id: \.engTitle) { activity in
-                            VStack(alignment: .leading) {
-                                Text("activity.engTitle: \(activity.engTitle) / \(activity.korTitle)")
-                                if let count = activity.count {
-                                    Text("activity.count: \(count)")
-                                }
-                                if let set = activity.set {
-                                    Text("activity.set: \(set)")
-                                }
-                                if let weight = activity.weight {
-                                    Text("activity.weight: \(weight) kg")
-                                }
-                                if let time = activity.time {
-                                    Text("activity.time: \(time) seconds")
-                                }
-                            }
-                            .padding(.leading, 10)
-                        }
+                ForEach($onboardingVM.activityWeeklyRoutine, id: \.id) { routine in
+                    VStack {
+                        Text("routine.id : \(routine.id)")
+                        Text("day : \(routine.day)")
+                        Text("exerciseArea : \(routine.exerciseArea)")
+                        Text("exerciseNameEN : \(routine.exerciseNameEN)")
+                        Text("exerciseNameKR : \(routine.exerciseNameKR)")
+                        Text("reps : \(routine.reps)")
+                        Text("sets : \(routine.sets)")
+                        Text("weight : \(routine.weight)")
+                        Text("duration : \(routine.duration)")
                     }
-                    .padding()
-                    .border(Color.blue)
+//                    VStack(alignment: .leading) {
+//                        Text("routine.day: \(routine.day)")
+//                        Text("routine.activityType: \(routine.activityType)")
+//                        ForEach(routine.activityRoutine, id: \.engTitle) { activity in
+//                            VStack(alignment: .leading) {
+//                                Text("activity.engTitle: \(activity.engTitle) / \(activity.korTitle)")
+//                                if let count = activity.count {
+//                                    Text("activity.count: \(count)")
+//                                }
+//                                if let set = activity.set {
+//                                    Text("activity.set: \(set)")
+//                                }
+//                                if let weight = activity.weight {
+//                                    Text("activity.weight: \(weight) kg")
+//                                }
+//                                if let time = activity.time {
+//                                    Text("activity.time: \(time) seconds")
+//                                }
+//                            }
+//                            .padding(.leading, 10)
+//                        }
+//                    }
+//                    .padding()
+//                    .border(Color.blue)
                 }
             }
         }

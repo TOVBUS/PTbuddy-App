@@ -54,7 +54,13 @@ class OnboardingMemberInfo: ObservableObject, Codable {
         case basicInfo, eatingHabit, activityHabit, activityGoal
     }
 
-    init(basicInfo: BasicInfo, eatingHabit: EatingHabit, activityHabit: ActivityHabit, activityGoal: ActivityGoal) {
+    init(
+        basicInfo: BasicInfo = BasicInfo(nick: "", gender: "", birth: "", height: "", weight: ""
+        )
+        , eatingHabit: EatingHabit = EatingHabit(mealCount: "", mealAmout: "", carbohydratePerMealCount: "", proteinPerMealCount: "", vegetablePerMealCount: "", waterIntakePerDay: "", alcoholIntake: "")
+        , activityHabit: ActivityHabit = ActivityHabit(usualActivity: "", dailyStep: "", pushUpCount: "", isRegularActivity: "", regularActivity: "", regularActivityCount: "", activityTimePerDay: "", changeActivity: "")
+        , activityGoal: ActivityGoal = ActivityGoal(goalWeight: "", activityGoal: "", activityPlace: "", preferenceActivity: "", activityFrequency: "")
+    ) {
         self.basicInfo = basicInfo
         self.eatingHabit = eatingHabit
         self.activityHabit = activityHabit
