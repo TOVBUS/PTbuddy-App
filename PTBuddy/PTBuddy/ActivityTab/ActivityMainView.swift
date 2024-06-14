@@ -25,7 +25,13 @@ struct ActivityMainView: View {
                 .padding(.horizontal, 30)
                 .padding(.vertical, 20)
                 
-                Section {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("주간 목표")
+                            .pretendardFont(.Black, size: 18)
+                        
+                        Spacer()
+                    }
                     ZStack {
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(Color.black, lineWidth: 2)
@@ -36,101 +42,92 @@ struct ActivityMainView: View {
                             .padding()
                     }
                     .padding(.vertical, 20)
-                } header: {
-                    HStack {
-                        Text("주간 목표")
-                            .pretendardFont(.Black, size: 18)
-                        
-                        Spacer()
-                    }
                 }
                 .padding(.horizontal, 30)
                 
-                Section {
-                    VStack {
-                        HStack {
-                            
-                            NavigationLink(destination: ActivityRoutineListView()) {
-                                HStack {
-                                    Text("부위")
-                                        .pretendardFont(.Medium, size: 14)
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Text("상체")
-                                        .pretendardFont(.Bold, size: 14)
-                                        .foregroundColor(.white)
-                                }
-                                .padding()
-                                .frame(width: 100, height: 40)
-                                .background(Capsule().fill(Color.gray))
+                VStack(alignment: .leading) {
+                    HStack {
+                        NavigationLink(destination: ActivityRoutineListView()) {
+                            HStack {
+                                Text("부위")
+                                    .pretendardFont(.Medium, size: 14)
+                                    .foregroundColor(.white)
+                                Spacer()
+                                Text("상체")
+                                    .pretendardFont(.Bold, size: 14)
+                                    .foregroundColor(.white)
                             }
-                            
-                            Button(action: {
-                                showActivityTimeList.toggle()
-                            }) {
-                                HStack {
-                                    Text("시간")
-                                        .pretendardFont(.Medium, size: 14)
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Text("30분")
-                                        .pretendardFont(.Bold, size: 14)
-                                        .foregroundColor(.white)
-                                }
-                                .padding()
-                                .frame(width: 100, height: 40)
-                                .background(Capsule().fill(Color.gray))
+                            .padding()
+                            .frame(width: 100, height: 40)
+                            .background(Capsule().fill(Color.gray))
+                        }
+                        
+                        Button(action: {
+                            showActivityTimeList.toggle()
+                        }) {
+                            HStack {
+                                Text("시간")
+                                    .pretendardFont(.Medium, size: 14)
+                                    .foregroundColor(.white)
+                                Spacer()
+                                Text("30분")
+                                    .pretendardFont(.Bold, size: 14)
+                                    .foregroundColor(.white)
                             }
-                            .sheet(isPresented: $showActivityTimeList) {
-                                ActivityTimeListView()
-                                    .presentationDetents([.fraction(0.8)])
-                                    .presentationDragIndicator(.visible)
+                            .padding()
+                            .frame(width: 100, height: 40)
+                            .background(Capsule().fill(Color.gray))
+                        }
+                        .sheet(isPresented: $showActivityTimeList) {
+                            ActivityTimeListView()
+                                .presentationDetents([.fraction(0.8)])
+                                .presentationDragIndicator(.visible)
+                        }
+                        
+                        Button(action: {
+                            showActivityConditionList.toggle()
+                        }) {
+                            HStack {
+                                Text("컨디션")
+                                    .pretendardFont(.Medium, size: 14)
+                                    .foregroundColor(.white)
+                                Spacer()
+                                Text("100%")
+                                    .pretendardFont(.Bold, size: 14)
+                                    .foregroundColor(.white)
                             }
-                            
-                            Button(action: {
-                                showActivityConditionList.toggle()
-                            }) {
-                                HStack {
-                                    Text("컨디션")
-                                        .pretendardFont(.Medium, size: 14)
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Text("100%")
-                                        .pretendardFont(.Bold, size: 14)
-                                        .foregroundColor(.white)
-                                }
-                                .padding()
-                                .frame(width: 120, height: 40)
-                                .background(Capsule().fill(Color.gray))
-                            }
-                            .sheet(isPresented: $showActivityConditionList) {
-                                ActivityConditionListView()
-                                    .presentationDetents([.fraction(0.8)])
-                                    .presentationDragIndicator(.visible)
-                            }
+                            .padding()
+                            .frame(width: 120, height: 40)
+                            .background(Capsule().fill(Color.gray))
+                        }
+                        .sheet(isPresented: $showActivityConditionList) {
+                            ActivityConditionListView()
+                                .presentationDetents([.fraction(0.8)])
+                                .presentationDragIndicator(.visible)
                         }
                     }
                     .padding(.horizontal, 30)
                     .padding(.vertical, 10)
                     
-                    List(activityVM.activities) { activity in
-                        HStack {
-                            // TODO: need to change for thumbnail
-                            RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 50, height: 50)
-                                .foregroundStyle(Color.gray)
-                            Text(activity.title)
-                                .pretendardFont(.Medium, size: 18)
-                        }
-                    }
-                    .listStyle(PlainListStyle())
-                } header: {
                     HStack {
                         Text("체지방 감소 추천 플랜 (초급)")
                             .pretendardFont(.Black, size: 18)
                         
                         Spacer()
                     }
+                    .padding(.horizontal, 30)
+                    
+                    List(activityVM.routines, id: \.id) { routine in
+//                        HStack {
+//                            RoundedRectangle(cornerRadius: 10)
+//                                .frame(width: 50, height: 50)
+//                                .foregroundStyle(Color.gray)
+//                            Text(activity.activityTitle)
+//                                .pretendardFont(.Medium, size: 18)
+//                        }
+                        RoutineRowView(routine: routine)
+                    }
+                    .listStyle(PlainListStyle())
                 }
                 .padding(.horizontal, 30)
                 
