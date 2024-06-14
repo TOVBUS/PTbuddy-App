@@ -11,9 +11,10 @@ struct ActivityMainView: View {
     @StateObject private var activityVM = ActivityViewModel()
     @State private var showActivityTimeList = false
     @State private var showActivityConditionList = false
+    @EnvironmentObject var navPathFinder: NavigationPathFinder
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navPathFinder.path) {
             VStack {
                 // MARK: CustomHeader
                 HStack {
@@ -70,7 +71,7 @@ struct ActivityMainView: View {
                                     .pretendardFont(.Medium, size: 14)
                                     .foregroundColor(.white)
                                 Spacer()
-                                Text("30분")
+                                Text("35분")
                                     .pretendardFont(.Bold, size: 14)
                                     .foregroundColor(.white)
                             }
@@ -116,10 +117,11 @@ struct ActivityMainView: View {
                         Spacer()
                     }
                     .padding(.horizontal, 30)
-                    .padding(.bottom, 12)
+                    .padding(.bottom, 10)
                     
                     List(activityVM.routines, id: \.id) { routine in
                         RoutineRowView(routine: routine)
+                            .frame(alignment: .leading)
                             .listRowSeparator(.hidden)
                             .scrollIndicators(.hidden)
                     }
@@ -130,7 +132,9 @@ struct ActivityMainView: View {
                 Spacer()
                 
                 Button(action: {
-                    // 버튼 액션
+                    if let firstActivity = activityVM.activities.first {
+                        navPathFinder.addPath(option: .activityDetail(activity: firstActivity))
+                    }
                 }) {
                     Text("운동 시작하기")
                         .pretendardFont(.SemiBold, size: 18)
@@ -142,6 +146,9 @@ struct ActivityMainView: View {
                 }
                 .padding(.vertical)
             }
+            .navigationDestination(for: ViewOptions.self) { option in
+                option.view()
+            }
         }
     }
 }
@@ -149,4 +156,5 @@ struct ActivityMainView: View {
 #Preview {
     ActivityMainView()
         .environmentObject(ActivityViewModel())
+        .environmentObject(NavigationPathFinder.shared)
 }

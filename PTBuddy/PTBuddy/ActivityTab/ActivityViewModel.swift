@@ -10,13 +10,21 @@ import Combine
 import Alamofire
 
 class ActivityViewModel: ObservableObject {
-    @Published var activities: [Activity] = []
-    @Published var routines: [Routine] = [
-        Routine(id: UUID().uuidString, day: "월요일", exerciseArea: "전신 유산소", exerciseNameEN: "Treadmill Running", exerciseNameKR: "트레드밀 달리기", reps: nil, sets: nil, weight: nil, duration: "3600"),
-        Routine(id: UUID().uuidString, day: "화요일", exerciseArea: "전신 유산소", exerciseNameEN: "Jumping Jacks", exerciseNameKR: "점핑잭", reps: "50회", sets: "3세트", weight: nil, duration: nil),
-        Routine(id: UUID().uuidString, day: "수요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Squats", exerciseNameKR: "스쿼트", reps: "15회", sets: "3세트", weight: "10kg", duration: nil),
-        Routine(id: UUID().uuidString, day: "목요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Lunges", exerciseNameKR: "런지", reps: "12회", sets: "3세트", weight: "10kg", duration: nil),
-        Routine(id: UUID().uuidString, day: "금요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Plank", exerciseNameKR: "플랭크", reps: nil, sets: "3세트", weight: nil, duration: "60")
+    @Published var activities: [Activity] = [
+        Activity(id: "ab-wheel-rollout", activityTitle: "앱 휠 롤아웃", proTip: "무릎의 불편함을 피하려면 무릎을 꿇지 않도록 하세요.", howTo: "무릎을 꿇고 발을 들어 올린 상태에서 시작하세요.", primaryMusc: "Abs", muscleImage: "https://app.fitnessai.com/musclegroups/full/08751101-Rectus-Abdominis-LOWER_transparent.png", equipment: "Ab Wheel", videoURL: "https://app.fitnessai.com/exercises/23321201-Wheel-Rollout-female-Waist.mp4"),
+        Activity(id: "air-bike", activityTitle: "에어 바이크", proTip: "팔로 머리를 당기지 마세요.", howTo: "머리 뒤에 손을 놓고 바닥에 평평하게 누워세요.", primaryMusc: "Abs", muscleImage: "https://app.fitnessai.com/musclegroups/full/08751101-Obliques_transparent.png", equipment: "Air Bike", videoURL: "https://app.fitnessai.com/exercises/00031201-air-bike-m-waist.mp4"),
+        Activity(id: "alternating-straight-leg-raise", activityTitle: "알터네이팅 스트레이트 레그 레이즈", proTip: "다리를 올릴 때 더 강하게 숨을 내쉬세요.", howTo: "다리를 똑바로 펴고 천장을 향해 누워세요.", primaryMusc: "Abs", muscleImage: "https://app.fitnessai.com/musclegroups/full/08751101-Rectus-Abdominis-LOWER_transparent.png", equipment: "None", videoURL: "https://app.fitnessai.com/exercises/34961201-Lying-Straight-Leg-Marches-Waist.mp4"),
+        Activity(id: "assisted-straight-leg-raise", activityTitle: "어시스트 스트레이트 레그 레이즈", proTip: "집에서 운동하거나 벤치가 없을 때 이 운동을 하세요.", howTo: "천장을 향해 누워 벤치 옆에 위치하세요.", primaryMusc: "Abs", muscleImage: "https://app.fitnessai.com/musclegroups/full/08751101-Rectus-Abdominis-LOWER_transparent.png", equipment: "Bench", videoURL: "https://app.fitnessai.com/exercises/34991201-Self-Assisted-Inverted-Pullover-Back.mp4"),
+        Activity(id: "band-air-bike", activityTitle: "밴드 에어 바이크", proTip: "이 운동의 난이도를 높이려면 다리를 똑바로 유지하세요.", howTo: "밴드를 파워 랙이나 기둥에 단단히 감으세요.", primaryMusc: "Abs", muscleImage: "https://app.fitnessai.com/musclegroups/full/08751101-Rectus-Abdominis-LOWER_transparent.png", equipment: "Band", videoURL: "https://app.fitnessai.com/exercises/09721201-band-bicycle-crunch-waist.mp4"),
+        Activity(id: "band-crunch", activityTitle: "밴드 크런치", proTip: "불편함을 느끼면 허리 아래에 매트나 수건을 놓으세요.", howTo: "팔을 완전히 펴고 밴드를 잡고 바닥에 누워세요.", primaryMusc: "Abs", muscleImage: "https://app.fitnessai.com/musclegroups/full/08751101-Rectus-Abdominis-UPPER_transparent.png", equipment: "Band", videoURL: "https://app.fitnessai.com/exercises/40831201-band-upper-crunch-male-waist.mp4")
+    ]
+    
+    @Published var routines: [WeeklyRoutine] = [
+        WeeklyRoutine(id: UUID().uuidString, day: "월요일", exerciseArea: "전신 유산소", exerciseNameEN: "Treadmill Running", exerciseNameKR: "트레드밀 달리기", reps: nil, sets: nil, weight: nil, duration: "3600"),
+        WeeklyRoutine(id: UUID().uuidString, day: "화요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Squats", exerciseNameKR: "스쿼트", reps: "15회", sets: "3세트", weight: "10kg", duration: nil),
+        WeeklyRoutine(id: UUID().uuidString, day: "수요일", exerciseArea: "상체 근력 훈련 (가슴, 어깨, 삼두)", exerciseNameEN: "Push-ups", exerciseNameKR: "푸쉬업", reps: "20회", sets: "3세트", weight: nil, duration: nil),
+        WeeklyRoutine(id: UUID().uuidString, day: "목요일", exerciseArea: "전신 유산소", exerciseNameEN: "Running", exerciseNameKR: "달리기", reps: nil, sets: nil, weight: nil, duration: "3600"),
+        WeeklyRoutine(id: UUID().uuidString, day: "금요일", exerciseArea: "하체 근력 훈련 (하체, 복부)", exerciseNameEN: "Deadlifts", exerciseNameKR: "데드리프트", reps: "12회", sets: "3세트", weight: "10kg", duration: nil)
     ]
     @Published var weeklyGoal: Int = 7
     @Published var completedWorkouts: Int = 3
@@ -28,30 +36,17 @@ class ActivityViewModel: ObservableObject {
         fetchRoutines()
     }
     
+    // TODO: fetch data with alamofire
     func fetchActivities() {
-        
+        let url = "http://localhost:3000/today/routine"
     }
     
-    // TODO: 온보딩 서비스에서 호출하면 이거 필요없음
+    // TODO: fetch data with alamofire & parseResponse to weekly routine
     func fetchRoutines() {
         let url = "http://localhost:3000/routine/generate"
-        //        let parameters: [String: Any] = [ ? ]
-        
-        //        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        //            .responseDecodable(of: RoutineResponse.self) { response in
-        //                switch response.result {
-        //                    case .success(let routineResponse):
-        //                        let parsedRoutines = self.parseResponse(response: routineResponse.responses)
-        //                        DispatchQueue.main.async {
-        //                            self.routines = parsedRoutines
-        //                        }
-        //                    case .failure(let error):
-        //                        print(error)
-        //                }
-        //            }
     }
     
-    private func parseResponse(response: String) -> [Routine] {
+    private func parseWeeklyRoutineResponse(response: String) -> [WeeklyRoutine] {
         let lines = response.components(separatedBy: "||")
         
         for line in lines {
@@ -94,8 +89,8 @@ class ActivityViewModel: ObservableObject {
                 }
             }
             
-            let routine = Routine(
-                id: "String", // TODO: API에서 넘겨줄거임
+            let routine = WeeklyRoutine(
+                id: "String", // TODO: API에서 넘겨주는 id 받기
                 day: day,
                 exerciseArea: exerciseArea,
                 exerciseNameEN: exerciseNameEN,

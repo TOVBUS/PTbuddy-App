@@ -11,6 +11,7 @@ import SwiftData
 @main
 struct PTBuddyApp: App {
     @StateObject var navigationStackManager = NavigationStackManager()
+    @StateObject var navigationPathFinder = NavigationPathFinder.shared
     @StateObject private var onboardingVM = OnboardingViewModel()
     
     var body: some Scene {
@@ -18,6 +19,7 @@ struct PTBuddyApp: App {
             if navigationStackManager.isOnboardingCompleted {
                 MainTabView()
                     .environmentObject(navigationStackManager)
+                    .environmentObject(navigationPathFinder)
                     .modelContainer(for: [MealRecord.self, MealPlan.self])
             } else {
                 OnboardingMainView()

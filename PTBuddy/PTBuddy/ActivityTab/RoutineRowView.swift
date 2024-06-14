@@ -8,37 +8,66 @@
 import SwiftUI
 
 struct RoutineRowView: View {
-    let routine: Routine
+    let routine: WeeklyRoutine
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(routine.day)
-                .pretendardFont(.Bold, size: 20)
+            HStack {
+                Text(routine.day)
+                    .pretendardFont(.Bold, size: 20)
+                
+                Spacer()
+            }
+            .padding(.horizontal, 16)
             
-            Text("부위: \(routine.exerciseArea)")
-                .pretendardFont(.Medium, size: 16)
+            HStack {
+                Text("부위: \(routine.exerciseArea)")
+                    .pretendardFont(.Medium, size: 16)
+                Spacer()
+            }
+            .padding(.horizontal, 16)
             
-            Text("운동: \(routine.exerciseNameKR) (\(routine.exerciseNameEN))")
-                .pretendardFont(.Regular, size: 16)
+            HStack {
+                Text("운동: \(routine.exerciseNameKR) (\(routine.exerciseNameEN))")
+                    .pretendardFont(.Regular, size: 16)
+                Spacer()
+            }
+            .padding(.horizontal, 16)
             
             if let reps = routine.reps {
-                Text("횟수: \(reps)")
-                    .pretendardFont(.Regular, size: 16)
+                HStack {
+                    Text("횟수: \(reps)")
+                        .pretendardFont(.Regular, size: 16)
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
             }
             
             if let sets = routine.sets {
-                Text("세트: \(sets)")
-                    .pretendardFont(.Regular, size: 16)
+                HStack {
+                    Text("세트: \(sets)")
+                        .pretendardFont(.Regular, size: 16)
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
             }
             
             if let weight = routine.weight {
-                Text("무게: \(weight)kg")
-                    .pretendardFont(.Regular, size: 16)
+                HStack {
+                    Text("무게: \(weight)kg")
+                        .pretendardFont(.Regular, size: 16)
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
             }
             
             if let duration = routine.duration {
-                Text("시간: \(duration)초")
-                    .pretendardFont(.Regular, size: 16)
+                HStack {
+                    Text("시간: \(duration)초")
+                        .pretendardFont(.Regular, size: 16)
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
             }
         }
         .frame(maxWidth: .infinity)
@@ -51,14 +80,6 @@ struct RoutineRowView: View {
     }
 }
 
-struct ActivityDetailView: View {
-    let activity: Activity
-    
-    var body: some View {
-        Text("ActivityDetailView")
-    }
-}
-
 #Preview {
-    RoutineRowView(routine: ActivityViewModel().routines[0])
+    RoutineRowView(routine: WeeklyRoutine(id: UUID().uuidString, day: "월요일", exerciseArea: "전신 유산소", exerciseNameEN: "Treadmill Running", exerciseNameKR: "트레드밀 달리기", reps: nil, sets: nil, weight: nil, duration: "3600"))
 }

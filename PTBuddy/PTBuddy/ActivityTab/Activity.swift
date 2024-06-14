@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Activity: Decodable, Identifiable {
+struct Activity: Decodable, Identifiable, Hashable {
     let id: String
     let activityTitle: String
     let proTip: String?
@@ -16,9 +16,17 @@ struct Activity: Decodable, Identifiable {
     let muscleImage: String?
     let equipment: String?
     let videoURL: String?
+    
+    static func == (lhs: Activity, rhs: Activity) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
-struct Routine: Decodable, Identifiable {
+struct WeeklyRoutine: Decodable, Identifiable {
     let id: String
     let day: String
     let exerciseArea: String

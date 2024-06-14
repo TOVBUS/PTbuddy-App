@@ -14,6 +14,11 @@
 		3E464D602C1B537900AFCC87 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3E464D5F2C1B537900AFCC87 /* Alamofire */; };
 		3E464D6A2C1BBB7C00AFCC87 /* RoutineRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E464D692C1BBB7C00AFCC87 /* RoutineRowView.swift */; };
 		3E464D6C2C1BBBAA00AFCC87 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E464D6B2C1BBBAA00AFCC87 /* Activity.swift */; };
+		3E464D9B2C1BF1DD00AFCC87 /* NavigationPathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E464D9A2C1BF1DD00AFCC87 /* NavigationPathFinder.swift */; };
+		3E464D9D2C1BF21F00AFCC87 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E464D9C2C1BF21F00AFCC87 /* ActivityDetailView.swift */; };
+		3E464D9F2C1BF9A900AFCC87 /* ActivityDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E464D9E2C1BF9A900AFCC87 /* ActivityDetailRowView.swift */; };
+		3E464DA12C1BFDC800AFCC87 /* ActivityFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E464DA02C1BFDC800AFCC87 /* ActivityFinishView.swift */; };
+		3E464DA32C1C001200AFCC87 /* confetti.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3E464DA22C1C001200AFCC87 /* confetti.gif */; };
 		3E49AC772C1A79C1004C9137 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49AC762C1A79C1004C9137 /* MainTabView.swift */; };
 		3E49AC792C1A7A86004C9137 /* NavigationStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49AC782C1A7A86004C9137 /* NavigationStackManager.swift */; };
 		3E760D072C129C5B00DEC9F1 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */; };
@@ -77,6 +82,11 @@
 		3E1601822C0DAD81009466A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E464D692C1BBB7C00AFCC87 /* RoutineRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRowView.swift; sourceTree = "<group>"; };
 		3E464D6B2C1BBBAA00AFCC87 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		3E464D9A2C1BF1DD00AFCC87 /* NavigationPathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathFinder.swift; sourceTree = "<group>"; };
+		3E464D9C2C1BF21F00AFCC87 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		3E464D9E2C1BF9A900AFCC87 /* ActivityDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailRowView.swift; sourceTree = "<group>"; };
+		3E464DA02C1BFDC800AFCC87 /* ActivityFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFinishView.swift; sourceTree = "<group>"; };
+		3E464DA22C1C001200AFCC87 /* confetti.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = confetti.gif; sourceTree = "<group>"; };
 		3E49AC762C1A79C1004C9137 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		3E49AC782C1A7A86004C9137 /* NavigationStackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackManager.swift; sourceTree = "<group>"; };
 		3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
@@ -334,6 +344,10 @@
 				3E760D062C129C5B00DEC9F1 /* ActivityViewModel.swift */,
 				E1F6CDFB2C1AED7400CEE6CE /* VideoView.swift */,
 				3E464D692C1BBB7C00AFCC87 /* RoutineRowView.swift */,
+				3E464D9A2C1BF1DD00AFCC87 /* NavigationPathFinder.swift */,
+				3E464D9C2C1BF21F00AFCC87 /* ActivityDetailView.swift */,
+				3E464D9E2C1BF9A900AFCC87 /* ActivityDetailRowView.swift */,
+				3E464DA02C1BFDC800AFCC87 /* ActivityFinishView.swift */,
 			);
 			path = ActivityTab;
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				E1F6CDF52C1ACA4F00CEE6CE /* GifImage.swift */,
+				3E464DA22C1C001200AFCC87 /* confetti.gif */,
 				E1F6CDF72C1ACA7500CEE6CE /* loading.gif */,
 				E1F6CDFD2C1B0A0B00CEE6CE /* LoadingView.swift */,
 			);
@@ -412,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E464DA32C1C001200AFCC87 /* confetti.gif in Resources */,
 				8F03F5942C0F4EFF00C8D1C1 /* Pretendard-SemiBold.otf in Resources */,
 				E1F6CDF82C1ACA7600CEE6CE /* loading.gif in Resources */,
 				8F03F5902C0F4EFF00C8D1C1 /* Pretendard-Medium.otf in Resources */,
@@ -434,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E464DA12C1BFDC800AFCC87 /* ActivityFinishView.swift in Sources */,
 				3E464D6C2C1BBBAA00AFCC87 /* Activity.swift in Sources */,
 				C40CEB852C18488E00C86273 /* MealPlanViewModel.swift in Sources */,
 				E1F6CDC02C11983300CEE6CE /* OnboardingQuestionView.swift in Sources */,
@@ -442,6 +459,7 @@
 				E1F6CE002C1B149800CEE6CE /* OnboardingCompleteView.swift in Sources */,
 				C40CEB572C1220B100C86273 /* RecommendedDietView.swift in Sources */,
 				3E16017E2C0DAD7F009466A3 /* ContentView.swift in Sources */,
+				3E464D9D2C1BF21F00AFCC87 /* ActivityDetailView.swift in Sources */,
 				E1F6CDCD2C18427500CEE6CE /* OnboardingViewModel.swift in Sources */,
 				E1F6CDB22C104A3600CEE6CE /* OnboardingMemberInfo.swift in Sources */,
 				E1F6CDFE2C1B0A0B00CEE6CE /* LoadingView.swift in Sources */,
@@ -468,6 +486,7 @@
 				C40CEB9C2C19BE2900C86273 /* MealRecordViewModel.swift in Sources */,
 				E1F6CDAC2C103F8E00CEE6CE /* EatingHabit.swift in Sources */,
 				E1F6CDC42C14B7FB00CEE6CE /* OnboardingDatePickerView.swift in Sources */,
+				3E464D9F2C1BF9A900AFCC87 /* ActivityDetailRowView.swift in Sources */,
 				C42EB1E82C0FFFD30031C3FF /* OnboardingMainView.swift in Sources */,
 				E1F6CDC22C11DA7000CEE6CE /* OnboardingTextFieldView.swift in Sources */,
 				E1F6CDAA2C103F7400CEE6CE /* BasicInfo.swift in Sources */,
@@ -478,6 +497,7 @@
 				E1F6CDAE2C10427A00CEE6CE /* ActivityHabit.swift in Sources */,
 				E1F6CDBE2C117BCD00CEE6CE /* OnboardingQuestion.swift in Sources */,
 				3E16017C2C0DAD7F009466A3 /* PTBuddyApp.swift in Sources */,
+				3E464D9B2C1BF1DD00AFCC87 /* NavigationPathFinder.swift in Sources */,
 				E1F6CDF62C1ACA4F00CEE6CE /* GifImage.swift in Sources */,
 				C40CEB4D2C12171800C86273 /* MealRecordModel.swift in Sources */,
 				3E49AC792C1A7A86004C9137 /* NavigationStackManager.swift in Sources */,
