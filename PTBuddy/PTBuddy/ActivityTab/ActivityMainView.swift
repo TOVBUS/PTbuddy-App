@@ -85,11 +85,8 @@ struct ActivityMainView: View {
                                 .presentationDetents([.fraction(0.8)])
                                 .presentationDragIndicator(.visible)
                         }
-                        
                         Button(action: {
                             showActivityConditionList.toggle()
-                            print("=======================================")
-                            print(onboardingVM.activityWeeklyRoutine)
                         }) {
                             HStack {
                                 Text("컨디션")

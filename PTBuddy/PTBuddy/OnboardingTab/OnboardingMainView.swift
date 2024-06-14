@@ -47,11 +47,9 @@ struct OnboardingMainView: View {
                         }
                         .onAppear(perform: {
                             onboardingVM.fetchActivityRoutine { }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 40) {
                                 withAnimation {
-                                    print("showLoadingView : \(showLoadingView)")
                                     showLoadingView = false
-                                    print("showLoadingView : \(showLoadingView)")
                                 }
                             }
                         })
